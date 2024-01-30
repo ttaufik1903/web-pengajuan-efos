@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template-efos.html}">
+<head>
+<title>DETAIL PRODUK</title>
+
+</head>
+<body>
+	<section layout:fragment="custom-content">
+
+		<nav style="-bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+
+				<li class="breadcrumb-item active" aria-current="page">Deskripsi
+					Konsumer</li>
+			</ol>
+		</nav>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-6" style="margin-top: 10px">
+
+					<img src="images/PAG.jpg" alt="logo travel"
+						style="width: 100%; height: 400px;" />
+				</div>
+				<div class="col-6" style="margin-top: 10px">
+
+					<P>Pembiayaan Aneka Guna BRK Syariah adalah fasilitas
+						pembiayaan yang diberikan kepada nasabah berpenghasilan tetap
+						(ASN, CPNS, Pegawai BUMN/BUMD, Pegawai tetap perusahaan swasta,
+						dll) dan pekerja profesi (dokter, notaris, dll) untuk berbagai
+						kebutuhan yang bersifat konsumtif antara lain pendidikan,
+						pernikahan, kesehatan dan lain-lain.</p>
+					<p>
+						<b>Keuntungan</b>
+					<ul>
+						<li>Proses cepat dan mudah</li>
+						<li>Rate bersaing</li>
+						<li>Jangka waktu hingga 15 tahun.</li>
+						<li>Tujuan penggunaan sesuai dengan kebutuhan.</li>
+						<li>Dapat dilakukan dengan take over bank lain dan top up.</li>
+					</ul>
+					</p>
+					<p>
+						<b>Syarat dan Ketentuan</b>
+					<li>KTP</li>
+					<li>KK (Kartu Keluarga)</li>
+					<li>NPWP</li>
+					<li>Memiiki Rekening BRK Syariah</li>
+					<li>Melampirkan slip penghasilan bulanan</li>
+					</p>
+
+					<a th:href="@{/formPengajuan}" class="btn btn-danger" role="button"><i
+						class="fa fa-check"> Ajukan Pembiayaan </i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

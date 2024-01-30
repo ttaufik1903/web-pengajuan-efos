@@ -1,0 +1,229 @@
+body {
+    font-family: 'Assistant', sans-serif;
+  }
+  
+  .navbar-brand img {
+    max-height: 40px;
+  }
+  .navbar{
+    .container-fluid{
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    color: #071c4d;
+                    &.active{
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+  }
+  .btn-login{
+    background-color: #071c4d;
+    color: #ffffff;
+    &.btn-login:hover{
+        background-color: red;
+        color: #ffffff;
+    }
+}
+.btn-navbar-right{
+    margin-top: -10px !important;
+    margin-bottom: -8px !important;
+    margin-right: -16px !important;
+    height: 70px;
+    border-radius: 0;
+}
+header{
+    background-image: url(../images/beach.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -96px;
+    padding: 180px 0 165px 0;
+    h2, p{
+        color: #fff;
+    }
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        text-shadow: 1px 1.5px 1px;
+        color: rgb(255, 255, 255);
+
+    }
+    p{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+    }
+    .btn-get-started{
+        background-color: #FF9E53;
+        color: #ffffff;
+        &:hover{
+            background-color: #e96f12;
+            color: #ffffff;
+        }
+    }
+}
+.section-status{
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+    .status-detail{
+        display: inline-block;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+.section-popular{
+    min-height: 540px;
+    background: rgb(27, 26, 59);
+    margin-top: -52px;
+    margin-bottom: -230px;
+    .section-popular-heading{
+        margin-top: 150px;
+    }
+    h2, p{
+        color: #ffffff;
+    }
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    .section-status {margin-top: -150px !important;}
+}
+@media (max-width: 820px) {
+    .section-status {margin-top: -150px !important;}
+}
+@media (max-width: 912px) {
+    .section-status {margin-top: -150px !important;}
+}
+@media (max-width: 280px) {
+    .section-status{
+        h2, p{
+            font-size: 13px;
+        }
+    }
+}
+.section-popular-content{
+    background: rgb(27, 26, 59);
+    .section-travel-card{
+        .card-travel{
+            background-color: #000;
+            color: #ffffff;
+            padding: 30px;
+            background-size: cover;
+            margin-bottom: 40px;
+            min-height: 380px;
+        }
+    }
+}
+.travel-country{
+    font-size: 24px;
+    color: #fff;
+}
+.travel-location{
+    font-size: 18px;
+    color: #fff;
+}
+.travel-button{
+    .btn-travel-detail{
+        background-color: #FF9e53;
+        color: #fff;
+        &:hover{
+            background-color: #e06c14;
+            color: #fff;
+        }
+    }
+}
+.section-network{
+    background-color: #fff;
+    padding-top: 240px;
+    margin-top: -170px;
+    padding-bottom: 20px;
+    h2{
+        font-family: 'MontSerrat' , sans-serif;
+    }
+    img{
+        max-width: 100%;
+    }
+
+}
+
+.section-testimonial-heading{
+    padding-top: 50px;
+    min-height: 506px;
+    background: linear-gradient(#fff 0%, #e6ecfc 100%);
+    h2{
+        font-family: 'Montserrat' , sans-serif;
+        font-size: 40px;
+    }
+}
+
+// testimonial konten
+.section-testimonial-content{
+    margin-top: -300px;
+    padding-bottom: 50px;
+    .card-testimonial{
+        padding: 40px 20px 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        .testimonial-content{
+            min-height: 380px;
+            h3{
+                font-size: 22;
+            }
+            .testimonial{
+                font-weight: 200;
+                font-size: 25px;
+                color: #6e6e6e;
+            }
+        }
+        hr{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .trip-to{
+            font-size: 22px;
+            color: #6e6e6e;
+            font-weight: normal;
+        }
+    }
+    .btn-get-started{
+        background-color: rgb(255, 217, 0);
+        color: rgb(0, 0, 0);
+        &:hover{
+            background-color: rgb(255, 68, 0);
+            color: rgb(255, 255, 255);
+        }
+    }
+    .btn-need-help{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        &:hover{
+            background-color: rgb(4, 0, 255);
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+.section-footer{
+    background-color: #000;
+    color: #ffffff;
+    a{
+    text-decoration: none;
+    color: #ffffff;
+    &:hover{
+        text-decoration: underline;
+    }
+    }
+    .container-fluid{
+        p{
+            color: #ffffff;
+        }
+    }
+}

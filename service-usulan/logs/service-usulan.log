@@ -1,0 +1,152 @@
+2022-08-08 07:59:16.905  INFO [service-usulan,,,] 3632 --- [main] c.r.s.ServiceUsulanApplication           : No active profile set, falling back to default profiles: default
+2022-08-08 07:59:18.151  INFO [service-usulan,,,] 3632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-08 07:59:18.683  INFO [service-usulan,,,] 3632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 516ms. Found 25 JPA repository interfaces.
+2022-08-08 07:59:20.020  INFO [service-usulan,,,] 3632 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c73b3028-6116-384f-8113-95e8db9b80a2
+2022-08-08 07:59:22.058  INFO [service-usulan,,,] 3632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8045 (http)
+2022-08-08 07:59:22.072  INFO [service-usulan,,,] 3632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-08 07:59:22.072  INFO [service-usulan,,,] 3632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-08 07:59:22.271  INFO [service-usulan,,,] 3632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-08 07:59:22.272  INFO [service-usulan,,,] 3632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5326 ms
+2022-08-08 07:59:23.155 DEBUG [service-usulan,,,] 3632 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-08 07:59:23.175 DEBUG [service-usulan,,,] 3632 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-08 07:59:23.187 DEBUG [service-usulan,,,] 3632 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : Writing [[B@23145d90] as "application/json"
+2022-08-08 07:59:23.216 DEBUG [service-usulan,,,] 3632 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : Response 202 ACCEPTED
+2022-08-08 07:59:25.411  INFO [service-usulan,,,] 3632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: efos]
+2022-08-08 07:59:25.524  INFO [service-usulan,,,] 3632 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-08 07:59:26.021  INFO [service-usulan,,,] 3632 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-08 07:59:26.808  INFO [service-usulan,,,] 3632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-08 07:59:27.130  INFO [service-usulan,,,] 3632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-08 07:59:27.178  INFO [service-usulan,,,] 3632 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-08 07:59:28.810  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceusulan.models.DebiturId
+2022-08-08 07:59:28.810  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceusulan.models.DebiturId
+2022-08-08 07:59:28.822  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceusulan.models.mkm.M_data_hub_bank_Id
+2022-08-08 07:59:28.822  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceusulan.models.mkm.M_data_hub_bank_Id
+2022-08-08 07:59:28.825  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceusulan.models.Hub_bank_Id
+2022-08-08 07:59:28.826  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceusulan.models.Hub_bank_Id
+2022-08-08 07:59:28.829  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceusulan.models.DebiturId
+2022-08-08 07:59:28.829  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceusulan.models.DebiturId
+2022-08-08 07:59:28.830  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceusulan.models.Par_qaca_data
+2022-08-08 07:59:28.830  WARN [service-usulan,,,] 3632 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceusulan.models.Par_qaca_data
+2022-08-08 07:59:32.571  INFO [service-usulan,,,] 3632 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.rabbai.serviceusulan.models.CifData (class must be instantiated by Interceptor)
+2022-08-08 07:59:33.727  INFO [service-usulan,,,] 3632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-08 07:59:33.754  INFO [service-usulan,,,] 3632 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'efos'
+2022-08-08 07:59:33.928  WARN [service-usulan,,,] 3632 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-08 07:59:38.572  INFO [service-usulan,,,] 3632 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1872c2d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a8efb4, org.springframework.security.web.header.HeaderWriterFilter@15f75fa5, org.springframework.security.web.authentication.logout.LogoutFilter@54db2ab9, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@1e594828, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c6d1f1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d839d22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15b810df, org.springframework.security.web.session.SessionManagementFilter@4e5b0a90, org.springframework.security.web.access.ExceptionTranslationFilter@2de83c2c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1fb81254]
+2022-08-08 07:59:38.622  WARN [service-usulan,,,] 3632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-08 07:59:38.622  INFO [service-usulan,,,] 3632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-08 07:59:38.631  WARN [service-usulan,,,] 3632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-08 07:59:38.631  INFO [service-usulan,,,] 3632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-08 07:59:38.941  INFO [service-usulan,,,] 3632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-08 07:59:38.974 DEBUG [service-usulan,,,] 3632 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-08-08 07:59:39.137 DEBUG [service-usulan,,,] 3632 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 41 mappings in 'requestMappingHandlerMapping'
+2022-08-08 07:59:39.260 DEBUG [service-usulan,,,] 3632 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-08-08 07:59:39.293 DEBUG [service-usulan,,,] 3632 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-08-08 07:59:41.200  WARN [service-usulan,,,] 3632 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-08-08 07:59:41.944  INFO [service-usulan,,,] 3632 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-08-08 07:59:42.120  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-08 07:59:43.420  INFO [service-usulan,,,] 3632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-08-08 07:59:43.420  INFO [service-usulan,,,] 3632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-08-08 07:59:43.799  INFO [service-usulan,,,] 3632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-08-08 07:59:43.799  INFO [service-usulan,,,] 3632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-08-08 07:59:44.053  INFO [service-usulan,,,] 3632 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 07:59:44.481  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-08 07:59:44.482  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-08 07:59:44.482  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-08 07:59:44.482  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-08 07:59:44.482  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-08 07:59:44.482  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-08 07:59:44.482  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-08 07:59:45.225  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-08 07:59:45.229  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-08 07:59:45.239  INFO [service-usulan,,,] 3632 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-08 07:59:45.243  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1659920385242 with initial instances count: 1
+2022-08-08 07:59:45.260  INFO [service-usulan,,,] 3632 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE-USULAN with eureka with status UP
+2022-08-08 07:59:45.291  INFO [service-usulan,,,] 3632 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1659920385291, current=UP, previous=STARTING]
+2022-08-08 07:59:45.322  INFO [service-usulan,,,] 3632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-USULAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-usulan:8045: registering service...
+2022-08-08 07:59:45.544  INFO [service-usulan,,,] 3632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8045 (http) with context path ''
+2022-08-08 07:59:45.545  INFO [service-usulan,,,] 3632 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8045
+2022-08-08 07:59:45.808  INFO [service-usulan,,,] 3632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-USULAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-usulan:8045 - registration status: 204
+2022-08-08 07:59:46.352  INFO [service-usulan,,,] 3632 --- [main] c.r.s.ServiceUsulanApplication           : Started ServiceUsulanApplication in 31.557 seconds (JVM running for 32.307)
+2022-08-08 08:04:44.475  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:09:44.497  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:14:44.498  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:19:44.505  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:24:44.512  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:29:44.511  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:34:44.520  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:39:44.527  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:44:44.530  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:49:44.531  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:54:44.538  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:59:44.543  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:04:44.546  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:09:44.550  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:14:44.555  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:19:44.560  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:24:44.569  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:29:44.580  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:34:44.583  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:39:44.586  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:44:44.600  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:49:44.611  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:54:44.619  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:59:44.623  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:04:44.632  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:09:44.633  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:14:44.638  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:19:44.647  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:24:44.647  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:29:44.654  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:34:44.657  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:39:44.663  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:44:44.673  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:49:44.677  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:54:44.684  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:59:44.692  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:04:44.692  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:09:44.696  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:14:44.703  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:19:44.708  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:24:44.707  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:29:44.719  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:34:44.717  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:39:44.715  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:44:44.722  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:49:44.729  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:54:44.738  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:59:44.736  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:04:44.735  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:09:44.735  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:14:44.737  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:19:44.736  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:24:44.745  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:29:44.746  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:34:44.747  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:39:44.755  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:44:44.770  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:49:44.779  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:54:44.780  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:59:44.789  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:04:44.800  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:09:44.807  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:14:44.805  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:19:44.815  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:24:44.827  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:29:44.828  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:34:44.834  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:39:44.847  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:44:44.857  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:49:44.864  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:54:44.863  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:59:44.873  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:04:44.882  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:09:44.894  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:14:44.907  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:19:44.912  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:24:44.913  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:29:44.924  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:34:44.931  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:39:44.945  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:44:44.958  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:49:44.968  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:54:44.971  INFO [service-usulan,,,] 3632 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

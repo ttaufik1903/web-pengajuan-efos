@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<style type="text/css">
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	background-color: #B12126;
+}
+
+.navbar-brand {
+	float: left;
+	height: auto !important;
+	padding: 5px 15px !important;
+	font-size: 18px;
+	line-height: 50px !important;
+}
+
+.btn-group-vertical>.btn, .btn-group-vertical>.btn-group,
+	.btn-group-vertical>.btn-group>.btn {
+	display: block !important;
+	float: none;
+	width: 100%;
+	max-width: 100%;
+}
+
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	padding: 6px 12px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 4px;
+}
+
+ul.breadcrumb {
+	padding: 10px 16px;
+	margin-bottom: 5px;
+	list-style: none;
+	background-color: #eee;
+}
+
+ul.breadcrumb li {
+	display: inline;
+	font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+	color: #0275d8;
+	text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+	color: #01447e;
+	text-decoration: underline;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>EFOS BANK RIAU KEPRI</title>
+<link rel="icon" type="image/x-icon" th:href="@{/images/faveicon.jpeg}">
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+<link rel="stylesheet"
+	href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.2/select2.css">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+
+<link rel="canonical"
+	href="https://getbootstrap.com/docs/4.1/examples/sticky-footer-navbar/">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ 
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.2/select2.min.js"></script>
+
+
+<!-- <script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  -->
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script th:src="@{jquery-inputmask/jquery.inputmask.bundle.js}"></script>
+<script th:src="@{jquery-inputmask/jquery.mask.js}"></script>
+
+
+
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg"
+		style="background-color: #040404; margin-bottom: 1%">
+		<a class="navbar-brand" href="#"> <img
+			th:src="@{images/logo_bankriaukepri.png}" width="140px" height="45px"
+			alt="">
+		</a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" th:href="@{/}" style="color: white">EFOS
+					BANK RIAU KEPRI BRK</a>
+			</div>
+
+		</div>
+	</nav>
+	<div class="container">
+		<div class="col-sm-12">
+			<section layout:fragment="custom-content"></section>
+		</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<footer class="footer">
+		<div class="container">
+			<p style="color: white">
+				<i class="fa fa-phone"></i> Call Center : 1500470
+			</p>
+			<p style="color: white">
+				<i class="fa fa-map-marker"></i> Menara Dang Merdu Bank Riau Kepri
+				(Jalan Jenderal Sudirman No.462 Pekanbaru)
+			</p>
+		</div>
+	</footer>
+</body>
+
+
+<script>
+	$(document).ready(function() {
+
+		$("#harga_beli").mask("000,000,000,000", {
+			reverse : true
+		});
+
+		$("#uang_muka").mask("000,000,000,000", {
+			reverse : true
+		});
+
+		$("#plafon_pengajuan").mask("000,000,000,000", {
+			reverse : true
+		});
+
+		$('#datepicker').datepicker({
+			uiLibrary : 'bootstrap3'
+		});
+
+		$('#cab').select2({
+			placeholder : "Pilih Cabang Terdekat",
+		});
+
+	});
+</script>
+
+
+</html>

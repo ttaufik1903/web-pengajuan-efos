@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template-efos.html}">
+<head>
+<title>CEK STATUS PEMBIAYAAN ONLINE</title>
+
+</head>
+<body>
+	<section layout:fragment="custom-content">
+
+		<nav style="-bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+
+				<li class="breadcrumb-item active" aria-current="page">Cek
+					Status Pengajuan</li>
+			</ol>
+		</nav>
+
+		<div class="alert alert-warning alert-dismissible fade show"
+			th:if="${success}">
+			<strong>Info!</strong>
+			<th:block th:text="${success}"></th:block>
+			<button type="button" class="btn-close" data-bs-dismiss="alert"
+				aria-label="Close"></button>
+		</div>
+
+		<div class="alert alert-danger alert-dismissible fade show"
+			th:if="${error}">
+			<strong>Info!</strong>
+			<th:block th:text="${error}"></th:block>
+			<button type="button" class="btn-close" data-bs-dismiss="alert"
+				aria-label="Close"></button>
+		</div>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-4 ">
+					<h4>Form Cek Nomor Tiket</h4>
+
+					<form class="row g-3 needs-validation" novalidate
+						th:action="@{/prosesNomorTiket}" method="POST" enctype="utf8"
+						th:object="${pendaftaran}">
+
+
+						<div class="col-md-12">
+							<label for="pwd">Masukan Nomor Tiket Pengajuan Pembiayaan</label>
+							<input type="text" class="form-control"
+								th:attr="name='nomor_tiket'" th:value="${nomor_tiket}" required>
+						</div>
+						<div class="col-12" style="margin-top: 10px">
+
+							<div class="g-recaptcha"
+								data-sitekey="6Le218UeAAAAACJdjnk--SMwoFif30T4EnWtdZiO"></div>
+							<br />
+
+							<button type="submit" class="btn btn-primary">
+								<i class="fa fa-check">PROSES </i>
+							</button>
+							<a th:href="@{/}" class="btn btn-danger" role="button"><i
+								class="fa fa-home"> Kembali </i></a>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-sm-8" th:if="${ktp} != null">
+
+					<table class="table table-striped">
+						<tbody>
+
+							<tr class="table-primary">
+								<td>KTP</td>
+								<td>:</td>
+								<td><th:block th:text="${ktp}"></th:block></td>
+							</tr>
+							<tr class="table-success">
+								<td>Nama Calon Nasabah</td>
+								<td>:</td>
+								<td><th:block th:text="${nama}"></th:block></td>
+							</tr>
+							<tr class="table-primary">
+								<td>Status Pernikahan</td>
+								<td>:</td>
+								<td><th:block th:text="${status_pernikahan}"></th:block></td>
+							</tr>
+							<tr class="table-success">
+								<td>NPWP</td>
+								<td>:</td>
+								<td><th:block th:text="${npwp}"></th:block></td>
+							</tr>
+							<tr class="table-primary">
+								<td>Jenis Kelamin</td>
+								<td>:</td>
+								<td><th:block th:text="${kelamin}"></th:block></td>
+							</tr>
+							<tr class="table-success">
+								<td>Tempat Lahir</td>
+								<td>:</td>
+								<td><th:block th:text="${tmp_lahir}"></th:block></td>
+							</tr>
+							<tr class="table-primary">
+								<td>Tgl Lahir</td>
+								<td>:</td>
+								<td><th:block th:text="${tgl_lahir}"></th:block></td>
+							</tr>
+							<tr class="table-primary">
+								<td>Alamat</td>
+								<td>:</td>
+								<td><th:block th:text="${alamat}"></th:block></td>
+							</tr>
+							<tr class="table-success">
+								<td>Email</td>
+								<td>:</td>
+								<td><th:block th:text="${email}"></th:block></td>
+							</tr>
+							<tr class="table-primary">
+								<td>Tujuan Pembiayaan</td>
+								<td>:</td>
+								<td><th:block th:text="${tujuan_pembiayaan}"></th:block></td>
+							</tr>
+							<tr class="table-success">
+								<td>Plafond Pembiayaan</td>
+								<td>:</td>
+								<td><th:block th:text="${plafon_pengajuan}"></th:block></td>
+							</tr>
+							<tr class="table-primary">
+								<td>Jangka Waktu Pembiayaan</td>
+								<td>:</td>
+								<td><th:block th:text="${tenor_pengajuan}"></th:block></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

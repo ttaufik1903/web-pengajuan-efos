@@ -1,0 +1,271 @@
+body {
+	font-family: 'Assistant', sans-serif;
+}
+
+.navbar-brand img {
+	max-height: 40px;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item .nav-link {
+	color: #071c4d;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item .nav-link.active {
+	font-weight: bolder;
+}
+
+.btn-login {
+	background-color: #071c4d;
+	color: #ffffff;
+}
+
+.btn-login.btn-login:hover {
+	background-color: red;
+	color: #ffffff;
+}
+
+.btn-navbar-right {
+	margin-top: -10px !important;
+	margin-bottom: -8px !important;
+	margin-right: -16px !important;
+	height: 70px;
+	border-radius: 0;
+}
+
+
+
+header h2, header p {
+	color: #fff;
+}
+
+header h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	text-shadow: 1px 1.5px 1px;
+	color: white;
+}
+
+header p {
+	font-size: 22px;
+	color: white;
+}
+
+header .btn-get-started {
+	background-color: #FF9E53;
+	color: #ffffff;
+}
+
+header .btn-get-started:hover {
+	background-color: #e96f12;
+	color: #ffffff;
+}
+
+.section-status {
+	margin-top: -60px;
+	position: relative;
+	z-index: 2;
+}
+
+.section-status .status-detail {
+	display: inline-block;
+	background-color: white;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.section-popular {
+	min-height: 540px;
+	background: #1b1a3b;
+	margin-top: -52px;
+	margin-bottom: 230px;
+}
+
+.section-popular .section-popular-heading {
+	margin-top: 150px;
+}
+
+.section-popular h2, .section-popular p {
+	color: #ffffff;
+}
+
+.section-popular h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.section-popular p {
+	font-size: 18px;
+}
+
+@media ( max-width : 768px) {
+	.section-status {
+		margin-top: -150px !important;
+	}
+}
+
+@media ( max-width : 820px) {
+	.section-status {
+		margin-top: -150px !important;
+	}
+}
+
+@media ( max-width : 912px) {
+	.section-status {
+		margin-top: -150px !important;
+	}
+}
+
+@media ( max-width : 280px) {
+	.section-status h2, .section-status p {
+		font-size: 13px;
+	}
+}
+
+.section-popular-content {
+	background: #1b1a3b;
+}
+
+.section-popular-content .section-travel-card .card-travel {
+	background-color: #000;
+	color: #ffffff;
+	padding: 30px;
+	background-size: cover;
+	margin-bottom: 40px;
+	min-height: 210px;
+}
+
+.travel-country {
+	font-size: 24px;
+	color: #fff;
+}
+
+.travel-location {
+	font-size: 16px;
+	color: #fff;
+}
+
+.travel-button .btn-travel-detail {
+	background-color: #FF9e53;
+	color: #fff;
+}
+
+.travel-button .btn-travel-detail:hover {
+	background-color: #e06c14;
+	color: #fff;
+}
+
+.section-network {
+	background-color: #fff;
+	padding-top: 240px;
+	margin-top: -170px;
+	padding-bottom: 20px;
+}
+
+.section-network h2 {
+	font-family: 'MontSerrat', sans-serif;
+}
+
+.section-network img {
+	max-width: 100%;
+}
+
+.section-testimonial-heading {
+	padding-top: 100px;
+	min-height: 506px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff),
+		to(#e6ecfc));
+	background: linear-gradient(#fff 0%, #e6ecfc 100%);
+}
+
+.section-testimonial-heading h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+}
+
+.section-testimonial-content {
+	margin-top: -300px;
+	padding-bottom: 50px;
+}
+
+.section-testimonial-content .card-testimonial {
+	padding: 40px 20px 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.section-testimonial-content .card-testimonial .testimonial-content {
+	min-height: 380px;
+}
+
+.section-testimonial-content .card-testimonial .testimonial-content h3 {
+	font-size: 22;
+}
+
+.section-testimonial-content .card-testimonial .testimonial-content .testimonial
+	{
+	font-weight: 200;
+	font-size: 25px;
+	color: #6e6e6e;
+}
+
+.section-testimonial-content .card-testimonial hr {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.section-testimonial-content .card-testimonial .trip-to {
+	font-size: 22px;
+	color: #6e6e6e;
+	font-weight: normal;
+}
+
+.section-testimonial-content .btn-get-started {
+	background-color: #ffd900;
+	color: black;
+}
+
+.section-testimonial-content .btn-get-started:hover {
+	background-color: #ff4400;
+	color: white;
+}
+
+.section-testimonial-content .btn-need-help {
+	background-color: black;
+	color: white;
+}
+
+.section-testimonial-content .btn-need-help:hover {
+	background-color: #0400ff;
+	color: white;
+}
+
+.section-footer {
+	background-color: #000;
+	color: #ffffff;
+}
+
+.section-footer a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.section-footer a:hover {
+	text-decoration: underline;
+}
+
+.section-footer .container-fluid p {
+	color: #ffffff;
+}
+ 
+header {
+	background-image: url('../images/menara-brk-hd.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y: -96px;
+	padding: 100px 0 15px 0;
+}
+ 
+ 
+
+/*# sourceMappingURL=main.css.map */

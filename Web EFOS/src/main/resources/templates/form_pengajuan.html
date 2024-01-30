@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template-efos.html}">
+<head>
+
+<title>PENGAJUAN PEMBIAYAAN ONLINE</title>
+<style type="text/css">
+.checkbox-lg .form-check-input {
+	top: .8rem;
+	scale: 1.4;
+	margin-right: 0.7rem;
+}
+
+.checkbox-lg .form-check-label {
+	padding-top: 13px;
+}
+
+.checkbox-xl .form-check-input {
+	top: 1.2rem;
+	scale: 1.7;
+	margin-right: 0.8rem;
+}
+
+.checkbox-xl .form-check-label {
+	padding-top: 19px;
+}
+</style>
+</head>
+
+<body>
+
+	<section layout:fragment="custom-content">
+
+		<nav style="-bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Form
+					Pembiayaan</li>
+			</ol>
+		</nav>
+
+
+		<div class="alert alert-warning alert-dismissible fade show"
+			th:if="${success}">
+			<strong>Info!</strong>
+			<th:block th:text="${success}"></th:block>
+			<button type="button" class="btn-close" data-bs-dismiss="alert"
+				aria-label="Close"></button>
+		</div>
+
+		<div class="alert alert-danger alert-dismissible fade show"
+			th:if="${error}">
+			<th:block th:text="${error}"></th:block>
+			<button type="button" class="btn-close" data-bs-dismiss="alert"
+				aria-label="Close"></button>
+		</div>
+
+		<div class="container" id="inputktp" style="display: none">
+			<form action="#" id="form_cari_rekening"
+				class="row g-3 needs-validation" novalidate>
+				<div class="col-md-12">
+					<label for="validationCustom01" class="form-label">Masukan
+						Nomor Rekening Bank Riau</label> <input type="text" class="form-control"
+						id="nomor_rekening" required>
+					<div class="invalid-feedback">Nomor Rekening tidak boleh
+						kosong</div>
+				</div>
+
+				<div class="col-12">
+					<button class="btn btn-danger btn-sm" type="button" id="inputnorek"
+						onclick="preinputrekening();">
+						<i class="fa fa-backward"></i> PREV
+					</button>
+					<button class="btn btn-primary btn-sm" type="submit"
+						id="inputnorek2">
+						<i class="fa fa-search"></i> PROSES
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div id='loader' style='display: none;'>
+			<img src='images/ajax-loader.gif' width='32px' height='32px'>
+		</div>
+
+		<div class="row" id="question2" style="display: none">
+			<label for="scales">Apakah anda memiliki rekening di Bank
+				Riau Kepri</label>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="punyarekening"
+					id="rekeningyes" value="1"> <label class="form-check-label"
+					for="flexRadioDefault1"> Ya </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="punyarekening"
+					id="rekeningno" value="0" checked> <label
+					class="form-check-label" for="flexRadioDefault2"> Tidak </label>
+			</div>
+			<div class="col-12" style="margin-top: 10px">
+				<button class="btn btn-danger btn-sm" type="submit"
+					id="btnpunyarekeningprev" onclick="prevpunyarekening();">
+					<i class="fa fa-backward"></i> PREV
+				</button>
+				<button class="btn btn-primary btn-sm" type="submit"
+					id="btnpunyarekeningnext" onclick="nextpunyarekening();">
+					<i class="fa fa-forward"></i> NEXT
+				</button>
+			</div>
+		</div>
+
+		<div class="row" id="question1" style="display: none">
+			<label for="scales">Apakah anda nasabah Perorangan /
+				Perusahaan ?</label>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="jenisnasabah"
+					id="perorangan" value="perorangan" checked> <label
+					class="form-check-label" for="perorangan"> Perorangan </label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="jenisnasabah"
+					id="perusahaan" value="perusahaan"> <label
+					class="form-check-label" for="perusahaan"> Perusahaan </label>
+			</div>
+
+			<div class="col-12" style="margin-top: 10px">
+				<button class="btn btn-danger btn-sm" type="submit"
+					id="btnpunyarekeningprev" onclick="prevjenisdebitur();">
+					<i class="fa fa-backward"></i> PREV
+				</button>
+				<button class="btn btn-primary btn-sm" type="submit"
+					id="btnjenisdebitur" onclick="nextjenisdebitur();">
+					<i class="fa fa-forward"></i> NEXT
+				</button>
+			</div>
+		</div>
+
+		<div class="row" id="syarat">
+			<p>Dengan menekan tombol "Setuju & Ajukan Pinjaman" di bawah ini,
+				saya menyatakan hal-hal sebagai berikut :</p>
+
+			<ol style="margin-left: 15px">
+				<li>Data dan informasi yang saya berikan dalam pengajuan ini
+					adalah sesuai keadaaan yang sebenar-benarnya.</li>
+				<li>Saya menyetujui bahwa PT. Bank Riau Kepri Syariah, Tbk,
+					selanjutnya disebut Bank, berwenang untuk:
+					<ul>
+						<li>Memeriksa kebenaran data yang saya sampaikan dalam
+							pengajuan ini.</li>
+						<li>Mencari dan memperoleh keterangan dan referensi dari
+							sumber manapun dengan cara yang dianggap sah oleh Bank</li>
+						<li>Menyetujui atau menolak pengajuan pinjaman saya
+							berdasarkan analisa Bank.</li>
+						<li>Tidak mengembalikan seluruh dokumen yang telah saya
+							serahkan kepada Bank.</li>
+						<li>Memberikan secara terbatas dan/atau tidak terbatas data
+							yang telah saya sampaikan dalam pengajuan ini kepada pihak ketiga
+							dalam rangka kepentingan pemrosesan pengajuan pinjaman.</li>
+					</ul>
+				<li>Saya memahami dan mengerti bahwa Bank tidak berkewajiban
+					untuk memberikan fasilitas kredit kepada saya hingga saya memenuhi
+					semua persyaratan yang berlaku pada Bank dan telah menandatangani
+					dokumen yang diperlukan Bank dalam pemberian kredit.</li>
+				<li>Apabila ternyata data dan informasi, serta pernyataan yang
+					saya berikan/buat tidak sesuai dengan keadaan yang sebenarnya, maka
+					segala risiko dan konsekuensi yang diakibatkannya menjadi
+					sepenuhnya tanggung jawab saya</li>
+			</ol>
+<div class="form-check checkbox-xl">
+				<input type="checkbox" class="form-check-input" id="syaratcek"> <label for="scales">
+					Saya setuju dengan syarat dan ketentuan tersebut di atas.</label>
+
+			</div>
+			<br /> <br />
+			<div class="row" style="margin-left: 15px">
+				<div class="col">
+					<button type="button" class="btn btn-primary btn-lg"
+						onclick="nextsyarat();" id="btn-next" style="display: none">NEXT</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container"
+			style="padding: 10px; display: none; background-color: #FFFFFa;"
+			id="datapermohonan">
+
+			<form action="#" th:action="@{/savePendaftaran}" method="POST"
+				th:object="${pendaftaran}" enctype="utf8"
+				class="row g-3 needs-validation" novalidate>
+				<div class="col-md-12" style="margin-bottom: 0px">
+					<h5>
+						<span class="badge bg-primary" style="margin-bottom: 0px;">Data
+							Pemohon</span>
+					</h5>
+				</div>
+
+				<div class="col-md-6">
+
+					<label for="pwd">ID KTP</label> <input type="text"
+						class="form-control form-control-sm" id="ktp" th:attr="name='ktp'"
+						maxlength="16" th:value="${ktp}" required>
+				</div>
+
+				<div class="col-md-6">
+					<label for="pwd">Nama</label> <input type="text"
+						class="form-control form-control-sm" id="nama"
+						th:attr="name='nama'" th:value="${nama}" required>
+				</div>
+
+				<div class="col-md-6">
+					<label for="pwd">NPWP</label> <input type="text"
+						class="form-control form-control-sm" id="npwp"
+						th:attr="name='npwp'" th:value="${npwp}" required>
+				</div>
+
+				<div class="col-md-6">
+					<label for="pwd">Status Pernikahan</label> <select
+						th:attr="name='status_pernikahan'" id="status_nikah"
+						class="form-select form-select-sm"
+						aria-label="Default select example" required>
+						<option
+							th:if="${status_pernikahan != null && status_pernikahan=='B'}"
+							value="B" selected>Belum Menikah</option>
+						<option
+							th:if="${status_pernikahan != null && status_pernikahan=='M'}"
+							value="M" selected>Menikah</option>
+						<option
+							th:if="${status_pernikahan != null && status_pernikahan=='D'}"
+							value="D" selected>Janda/Duda</option>
+						<option th:if="${status_pernikahan  == null}" selected>Pilih
+							Status Pernikahan</option>
+						<option value="B">Belum Menikah</option>
+						<option value="M">Menikah</option>
+						<option value="D">Janda/Duda</option>
+					</select>
+				</div>
+
+
+				<div class="col-md-6">
+					<label for="pwd">Tempat Lahir</label> <input type="text"
+						class="form-control form-control-sm" id="tmp_lahir"
+						name="tmp_lahir" th:attr="name='tmp_lahir'"
+						th:value="${tmp_lahir}" required>
+				</div>
+
+				<div class="col-md-6">
+					<label for="pwd">Tanggal Lahir</label>
+					<div class="form-group">
+						<div class='input-group date' id='datepicker'>
+							<input type='text' name="tgl_lahir" id="tgl_lahir"
+								th:attr="name='tgl_lahir'" th:value="${tgl_lahir}"
+								class="form-control form-control-sm " autocomplete="off" /> <span
+								class="input-group-addon"> <span
+								class="glyphicon glyphicon-calendar"></span>
+							</span>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<label for="pwd">Jenis Kelamin</label> <select
+						class="form-select form-select-sm" id="kelamin"
+						th:attr="name='kelamin'" aria-label="Default select example"
+						required>
+						<option th:if="${kelamin != null && kelamin=='0'}" value="0"
+							selected>Pria</option>
+						<option th:if="${kelamin != null && kelamin=='1'}" value="1"
+							selected>Wanita</option>
+						<option th:if="${kelamin == null}" selected>Pilih Jenis
+							Kelamin</option>
+						<option value="0">Pria</option>
+						<option value="1">Wanita</option>
+					</select>
+				</div>
+
+				<div class="col-md-6">
+					<label for="email">Alamat</label> <input name="alamat" type="text"
+						th:attr="name='alamat'" th:value="${alamat}"
+						class="form-control form-control-sm" id="alamat" required>
+				</div>
+
+
+				<div class="col-md-6">
+					<label for="telepon">Nomor Telepon</label> <input type="text"
+						class="form-control form-control-sm" id="no_telp" name="no_telp"
+						th:attr="name='no_telp'" th:value="${no_telp}" required>
+				</div>
+
+				<div class="col-md-6">
+					<label for="email">Email address</label> <input type="email"
+						class="form-control form-control-sm" th:attr="name='email'"
+						th:value="${email}" name="email" id="email" required>
+				</div>
+				<div class="col-md-12" style="margin-bottom: 0px; margin-top: 15px">
+					<h5>
+						<span class="badge bg-primary"
+							style="margin-top: 15px; margin-bottom: 0px;">Data
+							Pengajuan</span>
+					</h5>
+				</div>
+
+				<div class="col-md-6">
+					<label for="pwd">Jenis Pembiayaan</label> <select
+						class="form-select form-select-sm" id="jenis_pembiayaan"
+						th:attr="name='jenis_pembiayaan'"
+						aria-label="Default select example" required>
+						<option
+							th:if="${jenis_pembiayaan != null && jenis_pembiayaan=='Konsumer'}"
+							value="Konsumer" selected>Konsumer</option>
+						<option
+							th:if="${jenis_pembiayaan != null && jenis_pembiayaan=='MKM'}"
+							value="MKM" selected>MKM</option>
+						<option value="" selected>Pilih Jenis Pembiayaan</option>
+						<option value="Konsumer">Konsumtif</option>
+						<option value="MKM">Usaha Mikcro, Kecil & Menengah</option>
+					</select>
+				</div>
+
+				<div class="col-md-6">
+					<label for="cabang">Cabang Pengajuan Kredit</label> <select
+						class="select2" th:attr="name='cab'" id="cab" style="width: 100%;"
+						required>
+						<option th:if="${kodeCabang != null && namaCabang !=null}"
+							th:value="${kodeCabang} + '-' + ${namaCabang}" selected><th:block
+								th:text="${kodeCabang} +  ' ' + '-' + ' ' +  ${namaCabang}"></option>
+						<option value="">Pilihan Cabang</option>
+						<option th:each="data: ${listcabang}"
+							th:value="${data.id} + '-' + ${data.cabang}"
+							th:text="${data.id}+' - '+${data.cabang}"></option>
+					</select>
+					<div class="invalid-feedback">Cabang harus dipilih.</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<label for="cabang">Tujuan Pembiayaan</label> <select
+						class="select2" th:attr="name='tujuan_pembiayaan'"
+						id="tujuan_pembiayaan" style="width: 100%;" required>
+						<option
+							th:if="${kode_tujuan_pembiayaan != null && nama_tujuan_pembiayaan !=null}"
+							th:value="${kode_tujuan_pembiayaan} + '-' + ${nama_tujuan_pembiayaan}"
+							selected><th:block
+								th:text="${kode_tujuan_pembiayaan} +  ' ' + '-' + ' ' +  ${nama_tujuan_pembiayaan}"></option>
+						<option value="">Pilihan Tujuan Pembiayaan</option>
+						<option th:each="data: ${listtujuanpembiayaan}"
+							th:value="${data.id} + '-' + ${data.name}"
+							th:text="${data.id}+' - '+${data.name}"></option>
+					</select>
+					<div class="invalid-feedback">Tujuan Pembiayaan harus
+						dipilih.</div>
+				</div>
+
+
+				<div class="col-md-6" style="display: none;" id="id_tujuan">
+					<label for="tujuan_pembiayaan_lainnya">Tujuan Pembiayaan
+						(Lainnya)</label> <input type="text" class="form-control form-control-sm"
+						id="id_tujuan_field" th:attr="name='tujuan_pembiayaan_lainnya'"
+						th:value="${tujuan_pembiayaan_lainnya}">
+				</div>
+
+				<div class="col-md-6">
+					<label for="email">Jangka Waktu Pembiayaan</label> <input
+						type="number" class="form-control form-control-sm"
+						id="tenor_pengajuan" name="tenor_pengajuan"
+						th:attr="name='tenor_pengajuan'" th:value="${tenor_pengajuan}"
+						required>
+				</div>
+
+				<div class="g-recaptcha"
+					data-sitekey="6Le218UeAAAAACJdjnk--SMwoFif30T4EnWtdZiO"></div>
+				<br />
+				<div class="col-6" style="margin-top: 10px">
+					<button type="submit" class="btn btn-primary">
+						<i class="fa fa-check"> Proses </i>
+					</button>
+					<a th:href="@{/}" class="btn btn-danger" role="button"> <i
+						class="fa fa-home"> Kembali </i></a>
+				</div>
+
+			</form>
+		</div>
+		<br />
+	</section>
+
+
+</body>
+
+</html>

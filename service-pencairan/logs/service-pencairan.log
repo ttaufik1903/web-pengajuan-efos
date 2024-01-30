@@ -1,0 +1,919 @@
+2022-08-11 09:08:17.896  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.ServicePencairanApplication        : No active profile set, falling back to default profiles: default
+2022-08-11 09:08:18.346  INFO [service-pencairan,,,] 17796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-11 09:08:18.556  INFO [service-pencairan,,,] 17796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199ms. Found 29 JPA repository interfaces.
+2022-08-11 09:08:18.977  INFO [service-pencairan,,,] 17796 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd60a9af-f2ff-3220-b513-ca956710464d
+2022-08-11 09:08:19.682  INFO [service-pencairan,,,] 17796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8046 (http)
+2022-08-11 09:08:19.690  INFO [service-pencairan,,,] 17796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-11 09:08:19.690  INFO [service-pencairan,,,] 17796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-11 09:08:19.794  INFO [service-pencairan,,,] 17796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-11 09:08:19.795  INFO [service-pencairan,,,] 17796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1883 ms
+2022-08-11 09:08:20.043 DEBUG [service-pencairan,,,] 17796 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:08:20.047 DEBUG [service-pencairan,,,] 17796 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:08:20.051 DEBUG [service-pencairan,,,] 17796 --- [pool-3-thread-1] org.springframework.web.HttpLogging      : Writing [[B@affdda] as "application/json"
+2022-08-11 09:08:20.562  WARN [service-pencairan,,,] 17796 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-08-11 09:08:20.972  INFO [service-pencairan,,,] 17796 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: efos]
+2022-08-11 09:08:21.032  INFO [service-pencairan,,,] 17796 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-11 09:08:21.186  INFO [service-pencairan,,,] 17796 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-11 09:08:21.380  INFO [service-pencairan,,,] 17796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-11 09:08:21.507  INFO [service-pencairan,,,] 17796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-11 09:08:21.527  INFO [service-pencairan,,,] 17796 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-11 09:08:22.275  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:08:22.275  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:08:22.276  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:08:22.276  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:08:22.277  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:08:22.277  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:08:22.277  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:08:22.277  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:08:22.277  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:08:22.278  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:08:22.278  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:08:22.278  WARN [service-pencairan,,,] 17796 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:08:23.405  INFO [service-pencairan,,,] 17796 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.brk.servicepencairan.models.CifData (class must be instantiated by Interceptor)
+2022-08-11 09:08:23.819  INFO [service-pencairan,,,] 17796 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-11 09:08:23.827  INFO [service-pencairan,,,] 17796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'efos'
+2022-08-11 09:08:23.884  WARN [service-pencairan,,,] 17796 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-11 09:08:25.157  INFO [service-pencairan,,,] 17796 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@299f3c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@48012514, org.springframework.security.web.header.HeaderWriterFilter@6852f1d, org.springframework.security.web.authentication.logout.LogoutFilter@76e579d8, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@7e26e452, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c02b068, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c9a434f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64fbc914, org.springframework.security.web.session.SessionManagementFilter@d4ce346, org.springframework.security.web.access.ExceptionTranslationFilter@18fe293d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59209bcd]
+2022-08-11 09:08:25.184  WARN [service-pencairan,,,] 17796 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:08:25.184  INFO [service-pencairan,,,] 17796 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:08:25.192  WARN [service-pencairan,,,] 17796 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:08:25.192  INFO [service-pencairan,,,] 17796 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:08:25.358  INFO [service-pencairan,,,] 17796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-11 09:08:25.378 DEBUG [service-pencairan,,,] 17796 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-08-11 09:08:25.439 DEBUG [service-pencairan,,,] 17796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 53 mappings in 'requestMappingHandlerMapping'
+2022-08-11 09:08:25.476 DEBUG [service-pencairan,,,] 17796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-08-11 09:08:25.487 DEBUG [service-pencairan,,,] 17796 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-08-11 09:08:26.061  WARN [service-pencairan,,,] 17796 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-08-11 09:08:26.448  INFO [service-pencairan,,,] 17796 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-08-11 09:08:26.505  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-11 09:08:26.793  INFO [service-pencairan,,,] 17796 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-08-11 09:08:26.793  INFO [service-pencairan,,,] 17796 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-08-11 09:08:26.897  INFO [service-pencairan,,,] 17796 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-08-11 09:08:26.897  INFO [service-pencairan,,,] 17796 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-08-11 09:08:27.025  INFO [service-pencairan,,,] 17796 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:08:27.172  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-11 09:08:27.173  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-11 09:08:27.173  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-11 09:08:27.173  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-11 09:08:27.173  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-11 09:08:27.173  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-11 09:08:27.173  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-11 09:08:27.336  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-11 09:08:27.338  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-11 09:08:27.339  INFO [service-pencairan,,,] 17796 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-11 09:08:27.342  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1660183707341 with initial instances count: 1
+2022-08-11 09:08:27.347  INFO [service-pencairan,,,] 17796 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE-PENCAIRAN with eureka with status UP
+2022-08-11 09:08:27.348  INFO [service-pencairan,,,] 17796 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1660183707348, current=UP, previous=STARTING]
+2022-08-11 09:08:27.350  INFO [service-pencairan,,,] 17796 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046: registering service...
+2022-08-11 09:08:27.394  INFO [service-pencairan,,,] 17796 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046 - registration status: 204
+2022-08-11 09:08:27.394  INFO [service-pencairan,,,] 17796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8046 (http) with context path ''
+2022-08-11 09:08:27.395  INFO [service-pencairan,,,] 17796 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8046
+2022-08-11 09:08:27.670  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.ServicePencairanApplication        : Started ServicePencairanApplication in 10.859 seconds (JVM running for 11.255)
+2022-08-11 09:08:27.671  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    :    ___  _____   ___   _____         _         _   	              
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    :   /  _]|     | /   \ / ___/    \\  | |__ _ _ | |__   //            
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    :  /  [_ |   __||     (   \_      )) | '_ \ '_|| / /   ((             
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    : |    _]|  |_  |  O  |\__  |    //  |_.__/ _| |_\_\   \\            
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    : |   [_ |   _] |     |/  \ |    PT Bank Riau Kepri                  
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    : |_____||__|    \___/ \____| 							              
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    : #########################################################################
+2022-08-11 09:08:27.672  INFO [service-pencairan,,,] 17796 --- [main] c.b.s.controllers.PencairanController    : Electronic Financing Origination System (v1.0.0.RELEASE DATE: 2022-06-02)
+2022-08-11 09:13:27.176  INFO [service-pencairan,,,] 17796 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:15:06.351  INFO [service-pencairan,,,] 17796 --- [http-nio-8046-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-11 09:15:06.351  INFO [service-pencairan,,,] 17796 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-11 09:15:06.352 DEBUG [service-pencairan,,,] 17796 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-08-11 09:15:06.361 DEBUG [service-pencairan,,,] 17796 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-08-11 09:15:06.361  INFO [service-pencairan,,,] 17796 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-08-11 09:15:06.409 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : HTTP GET http://172.100.201.71:9090/auth/realms/efos/protocol/openid-connect/certs
+2022-08-11 09:15:06.410 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:15:06.444 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2022-08-11 09:15:06.445 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2022-08-11 09:15:06.467 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/mkm/pencairan/settanggalakad", parameters={}
+2022-08-11 09:15:06.469 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.brk.servicepencairan.controllers.PencairanMkmController#settanggalakad(Map, Jwt)
+2022-08-11 09:15:06.490 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{id_loan=M.132.2022.0000002, user_id=BRK011631, user_nama=Riska Indriani, bawa_pasangan=1}]
+2022-08-11 09:15:06.517  INFO [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** REQUEST FROM FRONTEND /mkm/pencairan/settanggalakad ************** @ {"id_loan":"M.132.2022.0000002","user_id":"BRK011631","user_nama":"Riska Indriani","bawa_pasangan":"1"} 
+
+2022-08-11 09:15:06.590  INFO [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** RESPONSE TO FRONTEND /mkm/pencairan/settanggalakad ************** @ {"pesan":"Oops.. No Register M.132.2022.0000002  ini gak ada, coba yang lain ya !!!","kode":"10"} 
+
+2022-08-11 09:15:06.594 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-08-11 09:15:06.594 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{pesan=Oops.. No Register M.132.2022.0000002  ini gak ada, coba yang lain ya !!!, kode=10}]
+2022-08-11 09:15:06.601 DEBUG [service-pencairan,f30bcb0b18d72488,f30bcb0b18d72488,true] 17796 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-08-11 09:15:07.365 DEBUG [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:15:07.365 DEBUG [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:15:07.365 DEBUG [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] org.springframework.web.HttpLogging      : Writing [[B@7dc504a4] as "application/json"
+2022-08-11 09:15:07.871  WARN [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-11 09:15:07.875  WARN [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.19.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284) ~[zipkin-reporter-2.12.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358) [zipkin-reporter-2.12.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_301]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_301]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_301]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_301]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_301]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_301]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 9 common frames omitted
+
+2022-08-11 09:15:32.356 DEBUG [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/mkm/pencairan/settanggalakad", parameters={}
+2022-08-11 09:15:32.357 DEBUG [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.brk.servicepencairan.controllers.PencairanMkmController#settanggalakad(Map, Jwt)
+2022-08-11 09:15:32.357 DEBUG [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{id_loan=M.820.2022.0000009, user_id=BRK011631, user_nama=Riska Indriani, bawa_pasangan=1}]
+2022-08-11 09:15:32.358  INFO [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] c.b.s.c.PencairanMkmController           : 
+ ************** REQUEST FROM FRONTEND /mkm/pencairan/settanggalakad ************** @ {"id_loan":"M.820.2022.0000009","user_id":"BRK011631","user_nama":"Riska Indriani","bawa_pasangan":"1"} 
+
+2022-08-11 09:15:32.437  INFO [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] c.b.s.c.PencairanMkmController           : 
+ ************** RESPONSE TO FRONTEND /mkm/pencairan/settanggalakad ************** @ {"pesan":"DATA TIDAK SESUAI","kode":"05"} 
+
+2022-08-11 09:15:32.437 DEBUG [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-08-11 09:15:32.437 DEBUG [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{pesan=DATA TIDAK SESUAI, kode=05}]
+2022-08-11 09:15:32.441 DEBUG [service-pencairan,ea8ec9f71f55e4b7,ea8ec9f71f55e4b7,true] 17796 --- [http-nio-8046-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-08-11 09:15:33.073 DEBUG [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:15:33.073 DEBUG [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:15:33.073 DEBUG [service-pencairan,,,] 17796 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@6042d663}] org.springframework.web.HttpLogging      : Writing [[B@72449800] as "application/json"
+2022-08-11 09:17:15.984  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.ServicePencairanApplication        : No active profile set, falling back to default profiles: default
+2022-08-11 09:17:16.366  INFO [service-pencairan,,,] 11724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-11 09:17:16.555  INFO [service-pencairan,,,] 11724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181ms. Found 29 JPA repository interfaces.
+2022-08-11 09:17:16.944  INFO [service-pencairan,,,] 11724 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd60a9af-f2ff-3220-b513-ca956710464d
+2022-08-11 09:17:17.590  INFO [service-pencairan,,,] 11724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8046 (http)
+2022-08-11 09:17:17.598  INFO [service-pencairan,,,] 11724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-11 09:17:17.598  INFO [service-pencairan,,,] 11724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-11 09:17:17.695  INFO [service-pencairan,,,] 11724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-11 09:17:17.695  INFO [service-pencairan,,,] 11724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1698 ms
+2022-08-11 09:17:17.936 DEBUG [service-pencairan,,,] 11724 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:17:17.939 DEBUG [service-pencairan,,,] 11724 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:17:17.943 DEBUG [service-pencairan,,,] 11724 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : Writing [[B@3289750b] as "application/json"
+2022-08-11 09:17:18.451  WARN [service-pencairan,,,] 11724 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@2251b3bc}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-08-11 09:17:18.844  INFO [service-pencairan,,,] 11724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: efos]
+2022-08-11 09:17:18.887  INFO [service-pencairan,,,] 11724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-11 09:17:18.997  INFO [service-pencairan,,,] 11724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-11 09:17:19.157  INFO [service-pencairan,,,] 11724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-11 09:17:19.274  INFO [service-pencairan,,,] 11724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-11 09:17:19.289  INFO [service-pencairan,,,] 11724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-11 09:17:20.053  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:20.053  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:20.054  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:20.054  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:20.055  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:17:20.055  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:17:20.055  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:20.055  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:20.056  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:17:20.056  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:17:20.056  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:20.056  WARN [service-pencairan,,,] 11724 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:21.114  INFO [service-pencairan,,,] 11724 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.brk.servicepencairan.models.CifData (class must be instantiated by Interceptor)
+2022-08-11 09:17:21.474  INFO [service-pencairan,,,] 11724 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-11 09:17:21.480  INFO [service-pencairan,,,] 11724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'efos'
+2022-08-11 09:17:21.532  WARN [service-pencairan,,,] 11724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-11 09:17:22.739  INFO [service-pencairan,,,] 11724 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ba1a239, org.springframework.security.web.context.SecurityContextPersistenceFilter@2712bbab, org.springframework.security.web.header.HeaderWriterFilter@50e1c39c, org.springframework.security.web.authentication.logout.LogoutFilter@65876774, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@3738bd7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33c2a7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63f70fd7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31287930, org.springframework.security.web.session.SessionManagementFilter@10a00374, org.springframework.security.web.access.ExceptionTranslationFilter@6d340d36, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e9197d1]
+2022-08-11 09:17:22.763  WARN [service-pencairan,,,] 11724 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:17:22.763  INFO [service-pencairan,,,] 11724 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:17:22.767  WARN [service-pencairan,,,] 11724 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:17:22.767  INFO [service-pencairan,,,] 11724 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:17:22.929  INFO [service-pencairan,,,] 11724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-11 09:17:22.948 DEBUG [service-pencairan,,,] 11724 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-08-11 09:17:23.005 DEBUG [service-pencairan,,,] 11724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 53 mappings in 'requestMappingHandlerMapping'
+2022-08-11 09:17:23.040 DEBUG [service-pencairan,,,] 11724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-08-11 09:17:23.052 DEBUG [service-pencairan,,,] 11724 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-08-11 09:17:23.648  WARN [service-pencairan,,,] 11724 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-08-11 09:17:23.960  INFO [service-pencairan,,,] 11724 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-08-11 09:17:24.006  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-11 09:17:24.257  INFO [service-pencairan,,,] 11724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-08-11 09:17:24.257  INFO [service-pencairan,,,] 11724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-08-11 09:17:24.348  INFO [service-pencairan,,,] 11724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-08-11 09:17:24.349  INFO [service-pencairan,,,] 11724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-08-11 09:17:24.482  INFO [service-pencairan,,,] 11724 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-11 09:17:24.624  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-11 09:17:24.754  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-11 09:17:24.756  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-11 09:17:24.758  INFO [service-pencairan,,,] 11724 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-11 09:17:24.760  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1660184244760 with initial instances count: 2
+2022-08-11 09:17:24.765  INFO [service-pencairan,,,] 11724 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE-PENCAIRAN with eureka with status UP
+2022-08-11 09:17:24.765  INFO [service-pencairan,,,] 11724 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1660184244765, current=UP, previous=STARTING]
+2022-08-11 09:17:24.767  INFO [service-pencairan,,,] 11724 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046: registering service...
+2022-08-11 09:17:24.804  INFO [service-pencairan,,,] 11724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8046 (http) with context path ''
+2022-08-11 09:17:24.804  INFO [service-pencairan,,,] 11724 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8046
+2022-08-11 09:17:24.816  INFO [service-pencairan,,,] 11724 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046 - registration status: 204
+2022-08-11 09:17:25.058  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.ServicePencairanApplication        : Started ServicePencairanApplication in 10.038 seconds (JVM running for 10.394)
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    :    ___  _____   ___   _____         _         _   	              
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    :   /  _]|     | /   \ / ___/    \\  | |__ _ _ | |__   //            
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    :  /  [_ |   __||     (   \_      )) | '_ \ '_|| / /   ((             
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    : |    _]|  |_  |  O  |\__  |    //  |_.__/ _| |_\_\   \\            
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    : |   [_ |   _] |     |/  \ |    PT Bank Riau Kepri                  
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    : |_____||__|    \___/ \____| 							              
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    : #########################################################################
+2022-08-11 09:17:25.059  INFO [service-pencairan,,,] 11724 --- [main] c.b.s.controllers.PencairanController    : Electronic Financing Origination System (v1.0.0.RELEASE DATE: 2022-06-02)
+2022-08-11 09:17:29.679  INFO [service-pencairan,,,] 11724 --- [http-nio-8046-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-11 09:17:29.680  INFO [service-pencairan,,,] 11724 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-11 09:17:29.680 DEBUG [service-pencairan,,,] 11724 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-08-11 09:17:29.688 DEBUG [service-pencairan,,,] 11724 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-08-11 09:17:29.689  INFO [service-pencairan,,,] 11724 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-08-11 09:17:29.733 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : HTTP GET http://172.100.201.71:9090/auth/realms/efos/protocol/openid-connect/certs
+2022-08-11 09:17:29.734 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:17:29.759 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2022-08-11 09:17:29.759 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2022-08-11 09:17:29.781 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/mkm/pencairan/settanggalakad", parameters={}
+2022-08-11 09:17:29.782 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.brk.servicepencairan.controllers.PencairanMkmController#settanggalakad(Map, Jwt)
+2022-08-11 09:17:29.802 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{id_loan=M.820.2022.0000009, user_id=BRK011631, user_nama=Riska Indriani, bawa_pasangan=1}]
+2022-08-11 09:17:29.832  INFO [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** REQUEST FROM FRONTEND /mkm/pencairan/settanggalakad ************** @ {"id_loan":"M.820.2022.0000009","user_id":"BRK011631","user_nama":"Riska Indriani","bawa_pasangan":"1"} 
+
+2022-08-11 09:17:30.100  INFO [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** RESPONSE TO FRONTEND /mkm/pencairan/settanggalakad ************** @ {"pesan":"GENERATE TANGGAL BERHASIL","kode":"00","tanggal_akad":{"month":"AUGUST","year":2022,"dayOfMonth":11,"hour":9,"minute":17,"monthValue":8,"nano":977000000,"second":29,"dayOfWeek":"THURSDAY","dayOfYear":223,"chronology":{"id":"ISO","calendarType":"iso8601"}}} 
+
+2022-08-11 09:17:30.102 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-08-11 09:17:30.103 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{pesan=GENERATE TANGGAL BERHASIL, kode=00, tanggal_akad=2022-08-11T09:17:29.977}]
+2022-08-11 09:17:30.112 DEBUG [service-pencairan,19a5aa28e7aa196e,19a5aa28e7aa196e,true] 11724 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-08-11 09:17:31.021 DEBUG [service-pencairan,,,] 11724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@2251b3bc}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:17:31.022 DEBUG [service-pencairan,,,] 11724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@2251b3bc}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:17:31.022 DEBUG [service-pencairan,,,] 11724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@2251b3bc}] org.springframework.web.HttpLogging      : Writing [[B@11af17ee] as "application/json"
+2022-08-11 09:17:31.530  WARN [service-pencairan,,,] 11724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@2251b3bc}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-11 09:17:31.533  WARN [service-pencairan,,,] 11724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@2251b3bc}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.19.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284) ~[zipkin-reporter-2.12.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358) [zipkin-reporter-2.12.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_301]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_301]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_301]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_301]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_301]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_301]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 9 common frames omitted
+
+2022-08-11 09:17:51.765  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.ServicePencairanApplication        : No active profile set, falling back to default profiles: default
+2022-08-11 09:17:52.130  INFO [service-pencairan,,,] 2832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-11 09:17:52.309  INFO [service-pencairan,,,] 2832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171ms. Found 29 JPA repository interfaces.
+2022-08-11 09:17:52.686  INFO [service-pencairan,,,] 2832 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd60a9af-f2ff-3220-b513-ca956710464d
+2022-08-11 09:17:53.332  INFO [service-pencairan,,,] 2832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8046 (http)
+2022-08-11 09:17:53.340  INFO [service-pencairan,,,] 2832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-11 09:17:53.340  INFO [service-pencairan,,,] 2832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-11 09:17:53.436  INFO [service-pencairan,,,] 2832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-11 09:17:53.437  INFO [service-pencairan,,,] 2832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1659 ms
+2022-08-11 09:17:53.671 DEBUG [service-pencairan,,,] 2832 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:17:53.673 DEBUG [service-pencairan,,,] 2832 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:17:53.675 DEBUG [service-pencairan,,,] 2832 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : Writing [[B@5ea1f032] as "application/json"
+2022-08-11 09:17:54.194  WARN [service-pencairan,,,] 2832 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@11c713b7}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-08-11 09:17:54.583  INFO [service-pencairan,,,] 2832 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: efos]
+2022-08-11 09:17:54.625  INFO [service-pencairan,,,] 2832 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-11 09:17:54.731  INFO [service-pencairan,,,] 2832 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-11 09:17:54.887  INFO [service-pencairan,,,] 2832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-11 09:17:54.991  INFO [service-pencairan,,,] 2832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-11 09:17:55.006  INFO [service-pencairan,,,] 2832 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-11 09:17:55.707  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:55.707  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:55.708  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:55.708  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:55.708  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:17:55.709  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:17:55.709  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:55.709  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:17:55.709  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:17:55.709  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:17:55.710  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:55.710  WARN [service-pencairan,,,] 2832 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:17:56.753  INFO [service-pencairan,,,] 2832 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.brk.servicepencairan.models.CifData (class must be instantiated by Interceptor)
+2022-08-11 09:17:57.121  INFO [service-pencairan,,,] 2832 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-11 09:17:57.127  INFO [service-pencairan,,,] 2832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'efos'
+2022-08-11 09:17:57.180  WARN [service-pencairan,,,] 2832 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-11 09:17:58.387  INFO [service-pencairan,,,] 2832 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a171ac9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a144ea0, org.springframework.security.web.header.HeaderWriterFilter@2142b70d, org.springframework.security.web.authentication.logout.LogoutFilter@1d6d5c2a, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@ba1a239, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d95b04e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a025435, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@752448d2, org.springframework.security.web.session.SessionManagementFilter@472ab5a1, org.springframework.security.web.access.ExceptionTranslationFilter@7fb3e6b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fa7cb3]
+2022-08-11 09:17:58.411  WARN [service-pencairan,,,] 2832 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:17:58.412  INFO [service-pencairan,,,] 2832 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:17:58.418  WARN [service-pencairan,,,] 2832 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:17:58.418  INFO [service-pencairan,,,] 2832 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:17:58.566  INFO [service-pencairan,,,] 2832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-11 09:17:58.584 DEBUG [service-pencairan,,,] 2832 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-08-11 09:17:58.639 DEBUG [service-pencairan,,,] 2832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 53 mappings in 'requestMappingHandlerMapping'
+2022-08-11 09:17:58.678 DEBUG [service-pencairan,,,] 2832 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-08-11 09:17:58.688 DEBUG [service-pencairan,,,] 2832 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-08-11 09:17:59.242  WARN [service-pencairan,,,] 2832 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-08-11 09:17:59.543  INFO [service-pencairan,,,] 2832 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-08-11 09:17:59.588  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-11 09:17:59.846  INFO [service-pencairan,,,] 2832 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-08-11 09:17:59.846  INFO [service-pencairan,,,] 2832 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-08-11 09:17:59.938  INFO [service-pencairan,,,] 2832 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-08-11 09:17:59.938  INFO [service-pencairan,,,] 2832 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-08-11 09:18:00.044  INFO [service-pencairan,,,] 2832 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:18:00.192  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-11 09:18:00.192  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-11 09:18:00.192  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-11 09:18:00.193  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-11 09:18:00.193  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-11 09:18:00.193  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-11 09:18:00.193  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-11 09:18:00.347  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-11 09:18:00.349  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-11 09:18:00.351  INFO [service-pencairan,,,] 2832 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-11 09:18:00.354  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1660184280353 with initial instances count: 2
+2022-08-11 09:18:00.361  INFO [service-pencairan,,,] 2832 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE-PENCAIRAN with eureka with status UP
+2022-08-11 09:18:00.361  INFO [service-pencairan,,,] 2832 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1660184280361, current=UP, previous=STARTING]
+2022-08-11 09:18:00.363  INFO [service-pencairan,,,] 2832 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046: registering service...
+2022-08-11 09:18:00.402  INFO [service-pencairan,,,] 2832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8046 (http) with context path ''
+2022-08-11 09:18:00.403  INFO [service-pencairan,,,] 2832 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8046
+2022-08-11 09:18:00.415  INFO [service-pencairan,,,] 2832 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046 - registration status: 204
+2022-08-11 09:18:00.665  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.ServicePencairanApplication        : Started ServicePencairanApplication in 9.846 seconds (JVM running for 10.205)
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    :    ___  _____   ___   _____         _         _   	              
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    :   /  _]|     | /   \ / ___/    \\  | |__ _ _ | |__   //            
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    :  /  [_ |   __||     (   \_      )) | '_ \ '_|| / /   ((             
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    : |    _]|  |_  |  O  |\__  |    //  |_.__/ _| |_\_\   \\            
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    : |   [_ |   _] |     |/  \ |    PT Bank Riau Kepri                  
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    : |_____||__|    \___/ \____| 							              
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    : #########################################################################
+2022-08-11 09:18:00.667  INFO [service-pencairan,,,] 2832 --- [main] c.b.s.controllers.PencairanController    : Electronic Financing Origination System (v1.0.0.RELEASE DATE: 2022-06-02)
+2022-08-11 09:18:25.193  INFO [service-pencairan,,,] 2832 --- [http-nio-8046-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-11 09:18:25.193  INFO [service-pencairan,,,] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-11 09:18:25.193 DEBUG [service-pencairan,,,] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-08-11 09:18:25.200 DEBUG [service-pencairan,,,] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-08-11 09:18:25.201  INFO [service-pencairan,,,] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-08-11 09:18:25.241 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : HTTP GET http://172.100.201.71:9090/auth/realms/efos/protocol/openid-connect/certs
+2022-08-11 09:18:25.242 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:18:25.273 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2022-08-11 09:18:25.273 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2022-08-11 09:18:25.296 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/mkm/pencairan/settanggalakad", parameters={}
+2022-08-11 09:18:25.299 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.brk.servicepencairan.controllers.PencairanMkmController#settanggalakad(Map, Jwt)
+2022-08-11 09:18:25.319 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{id_loan=M.820.2022.0000009, user_id=BRK011631, user_nama=Riska Indriani, bawa_pasangan=1, tgl_akad= (truncated)...]
+2022-08-11 09:18:25.351  INFO [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** REQUEST FROM FRONTEND /mkm/pencairan/settanggalakad ************** @ {"id_loan":"M.820.2022.0000009","user_id":"BRK011631","user_nama":"Riska Indriani","bawa_pasangan":"1","tgl_akad":"2022-08-11"} 
+
+2022-08-11 09:18:25.356 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.time.format.DateTimeParseException: Text '2022-08-11' could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed
+2022-08-11 09:18:25.361 ERROR [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.c.s.i.web.ExceptionLoggingFilter     : Uncaught exception thrown
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.time.format.DateTimeParseException: Text '2022-08-11' could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:67) [brave-instrumentation-servlet-5.10.1.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:130) ~[spring-security-oauth2-resource-server-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.cloud.sleuth.instrument.web.ExceptionLoggingFilter.doFilter(ExceptionLoggingFilter.java:50) ~[spring-cloud-sleuth-core-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:84) [brave-instrumentation-servlet-5.10.1.jar:na]
+	at org.springframework.cloud.sleuth.instrument.web.LazyTracingFilter.doFilter(TraceWebServletAutoConfiguration.java:138) [spring-cloud-sleuth-core-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_301]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_301]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
+Caused by: java.time.format.DateTimeParseException: Text '2022-08-11' could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed
+	at java.time.format.DateTimeFormatter.createError(DateTimeFormatter.java:1920) ~[na:1.8.0_301]
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1855) ~[na:1.8.0_301]
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492) ~[na:1.8.0_301]
+	at com.brk.servicepencairan.controllers.PencairanMkmController.settanggalakad(PencairanMkmController.java:1010) ~[classes/:na]
+	at com.brk.servicepencairan.controllers.PencairanMkmController$$FastClassBySpringCGLIB$$f437a98b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.brk.servicepencairan.controllers.PencairanMkmController$$EnhancerBySpringCGLIB$$ba94ed36.settanggalakad(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_301]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 81 common frames omitted
+Caused by: java.time.DateTimeException: Unable to obtain LocalDateTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed
+	at java.time.LocalDateTime.from(LocalDateTime.java:461) ~[na:1.8.0_301]
+	at java.time.format.Parsed.query(Parsed.java:226) ~[na:1.8.0_301]
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1851) ~[na:1.8.0_301]
+	... 100 common frames omitted
+Caused by: java.time.DateTimeException: Unable to obtain LocalTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed
+	at java.time.LocalTime.from(LocalTime.java:409) ~[na:1.8.0_301]
+	at java.time.LocalDateTime.from(LocalDateTime.java:457) ~[na:1.8.0_301]
+	... 102 common frames omitted
+
+2022-08-11 09:18:25.369 ERROR [service-pencairan,,,] 2832 --- [http-nio-8046-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.time.format.DateTimeParseException: Text '2022-08-11' could not be parsed: Unable to obtain LocalDateTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed] with root cause
+
+java.time.DateTimeException: Unable to obtain LocalTime from TemporalAccessor: {},ISO resolved to 2022-08-11 of type java.time.format.Parsed
+	at java.time.LocalTime.from(LocalTime.java:409) ~[na:1.8.0_301]
+	at java.time.LocalDateTime.from(LocalDateTime.java:457) ~[na:1.8.0_301]
+	at java.time.format.Parsed.query(Parsed.java:226) ~[na:1.8.0_301]
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1851) ~[na:1.8.0_301]
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492) ~[na:1.8.0_301]
+	at com.brk.servicepencairan.controllers.PencairanMkmController.settanggalakad(PencairanMkmController.java:1010) ~[classes/:na]
+	at com.brk.servicepencairan.controllers.PencairanMkmController$$FastClassBySpringCGLIB$$f437a98b.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at com.brk.servicepencairan.controllers.PencairanMkmController$$EnhancerBySpringCGLIB$$ba94ed36.settanggalakad(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_301]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.38.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:67) ~[brave-instrumentation-servlet-5.10.1.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:130) ~[spring-security-oauth2-resource-server-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.cloud.sleuth.instrument.web.ExceptionLoggingFilter.doFilter(ExceptionLoggingFilter.java:50) ~[spring-cloud-sleuth-core-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:84) ~[brave-instrumentation-servlet-5.10.1.jar:na]
+	at org.springframework.cloud.sleuth.instrument.web.LazyTracingFilter.doFilter(TraceWebServletAutoConfiguration.java:138) ~[spring-cloud-sleuth-core-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_301]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_301]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
+
+2022-08-11 09:18:25.373 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2022-08-11 09:18:25.375 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-08-11 09:18:25.379 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-08-11 09:18:25.379 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Aug 11 09:18:25 ICT 2022, status=500, error=Internal Server Error, message=Text '2022 (truncated)...]
+2022-08-11 09:18:25.389 DEBUG [service-pencairan,2f088528cacc34c9,2f088528cacc34c9,true] 2832 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2022-08-11 09:18:25.979 DEBUG [service-pencairan,,,] 2832 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@11c713b7}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:18:25.980 DEBUG [service-pencairan,,,] 2832 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@11c713b7}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:18:25.980 DEBUG [service-pencairan,,,] 2832 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@11c713b7}] org.springframework.web.HttpLogging      : Writing [[B@4ba28e0] as "application/json"
+2022-08-11 09:18:26.486  WARN [service-pencairan,,,] 2832 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@11c713b7}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-11 09:18:26.487  WARN [service-pencairan,,,] 2832 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@11c713b7}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.19.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284) ~[zipkin-reporter-2.12.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358) [zipkin-reporter-2.12.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_301]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_301]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_301]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_301]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_301]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_301]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 9 common frames omitted
+
+2022-08-11 09:23:00.200  INFO [service-pencairan,,,] 2832 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:25:43.111  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.ServicePencairanApplication        : No active profile set, falling back to default profiles: default
+2022-08-11 09:25:43.468  INFO [service-pencairan,,,] 27128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-11 09:25:43.647  INFO [service-pencairan,,,] 27128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171ms. Found 29 JPA repository interfaces.
+2022-08-11 09:25:44.028  INFO [service-pencairan,,,] 27128 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bd60a9af-f2ff-3220-b513-ca956710464d
+2022-08-11 09:25:44.673  INFO [service-pencairan,,,] 27128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8046 (http)
+2022-08-11 09:25:44.681  INFO [service-pencairan,,,] 27128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-11 09:25:44.681  INFO [service-pencairan,,,] 27128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-11 09:25:44.783  INFO [service-pencairan,,,] 27128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-11 09:25:44.784  INFO [service-pencairan,,,] 27128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1661 ms
+2022-08-11 09:25:45.029 DEBUG [service-pencairan,,,] 27128 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:25:45.032 DEBUG [service-pencairan,,,] 27128 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:25:45.036 DEBUG [service-pencairan,,,] 27128 --- [pool-2-thread-1] org.springframework.web.HttpLogging      : Writing [[B@473d99ef] as "application/json"
+2022-08-11 09:25:45.552  WARN [service-pencairan,,,] 27128 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@7698b7a4}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-08-11 09:25:45.947  INFO [service-pencairan,,,] 27128 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: efos]
+2022-08-11 09:25:45.990  INFO [service-pencairan,,,] 27128 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-11 09:25:46.105  INFO [service-pencairan,,,] 27128 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-11 09:25:46.264  INFO [service-pencairan,,,] 27128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-11 09:25:46.367  INFO [service-pencairan,,,] 27128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-11 09:25:46.384  INFO [service-pencairan,,,] 27128 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-11 09:25:47.147  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:25:47.147  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:25:47.148  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:25:47.148  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:25:47.149  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:25:47.149  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.mkm.M_data_hub_bank_Id
+2022-08-11 09:25:47.149  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:25:47.149  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.DebiturId
+2022-08-11 09:25:47.149  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:25:47.149  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Hub_bank_Id
+2022-08-11 09:25:47.150  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:25:47.150  WARN [service-pencairan,,,] 27128 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.brk.servicepencairan.models.Qaca_data_id
+2022-08-11 09:25:48.251  INFO [service-pencairan,,,] 27128 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.brk.servicepencairan.models.CifData (class must be instantiated by Interceptor)
+2022-08-11 09:25:48.634  INFO [service-pencairan,,,] 27128 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-11 09:25:48.642  INFO [service-pencairan,,,] 27128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'efos'
+2022-08-11 09:25:48.694  WARN [service-pencairan,,,] 27128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-11 09:25:49.976  INFO [service-pencairan,,,] 27128 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1adcd53b, org.springframework.security.web.context.SecurityContextPersistenceFilter@72956e6f, org.springframework.security.web.header.HeaderWriterFilter@7fac91fb, org.springframework.security.web.authentication.logout.LogoutFilter@34260b5e, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@26ffe94e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65514a3d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@633f8efd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4474a287, org.springframework.security.web.session.SessionManagementFilter@7ed47d66, org.springframework.security.web.access.ExceptionTranslationFilter@1267348a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c0b71b5]
+2022-08-11 09:25:49.999  WARN [service-pencairan,,,] 27128 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:25:49.999  INFO [service-pencairan,,,] 27128 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:25:50.004  WARN [service-pencairan,,,] 27128 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-11 09:25:50.004  INFO [service-pencairan,,,] 27128 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-11 09:25:50.161  INFO [service-pencairan,,,] 27128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-11 09:25:50.179 DEBUG [service-pencairan,,,] 27128 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-08-11 09:25:50.234 DEBUG [service-pencairan,,,] 27128 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 53 mappings in 'requestMappingHandlerMapping'
+2022-08-11 09:25:50.271 DEBUG [service-pencairan,,,] 27128 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-08-11 09:25:50.282 DEBUG [service-pencairan,,,] 27128 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-08-11 09:25:50.850  WARN [service-pencairan,,,] 27128 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-08-11 09:25:51.161  INFO [service-pencairan,,,] 27128 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-08-11 09:25:51.211  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-11 09:25:51.467  INFO [service-pencairan,,,] 27128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-08-11 09:25:51.467  INFO [service-pencairan,,,] 27128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-08-11 09:25:51.559  INFO [service-pencairan,,,] 27128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-08-11 09:25:51.560  INFO [service-pencairan,,,] 27128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-08-11 09:25:51.689  INFO [service-pencairan,,,] 27128 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:25:51.836  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-11 09:25:51.836  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-11 09:25:51.836  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-11 09:25:51.837  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-11 09:25:51.837  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-11 09:25:51.837  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-11 09:25:51.837  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-11 09:25:51.968  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-11 09:25:51.970  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-11 09:25:51.972  INFO [service-pencairan,,,] 27128 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-11 09:25:51.974  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1660184751973 with initial instances count: 2
+2022-08-11 09:25:51.979  INFO [service-pencairan,,,] 27128 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE-PENCAIRAN with eureka with status UP
+2022-08-11 09:25:51.979  INFO [service-pencairan,,,] 27128 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1660184751979, current=UP, previous=STARTING]
+2022-08-11 09:25:51.980  INFO [service-pencairan,,,] 27128 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046: registering service...
+2022-08-11 09:25:52.016  INFO [service-pencairan,,,] 27128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8046 (http) with context path ''
+2022-08-11 09:25:52.017  INFO [service-pencairan,,,] 27128 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8046
+2022-08-11 09:25:52.028  INFO [service-pencairan,,,] 27128 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PENCAIRAN/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-pencairan:8046 - registration status: 204
+2022-08-11 09:25:52.284  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.ServicePencairanApplication        : Started ServicePencairanApplication in 10.137 seconds (JVM running for 10.507)
+2022-08-11 09:25:52.285  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    :    ___  _____   ___   _____         _         _   	              
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    :   /  _]|     | /   \ / ___/    \\  | |__ _ _ | |__   //            
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    :  /  [_ |   __||     (   \_      )) | '_ \ '_|| / /   ((             
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    : |    _]|  |_  |  O  |\__  |    //  |_.__/ _| |_\_\   \\            
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    : |   [_ |   _] |     |/  \ |    PT Bank Riau Kepri                  
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    : |_____||__|    \___/ \____| 							              
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    : #########################################################################
+2022-08-11 09:25:52.286  INFO [service-pencairan,,,] 27128 --- [main] c.b.s.controllers.PencairanController    : Electronic Financing Origination System (v1.0.0.RELEASE DATE: 2022-06-02)
+2022-08-11 09:25:55.236  INFO [service-pencairan,,,] 27128 --- [http-nio-8046-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-11 09:25:55.237  INFO [service-pencairan,,,] 27128 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-11 09:25:55.237 DEBUG [service-pencairan,,,] 27128 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-08-11 09:25:55.245 DEBUG [service-pencairan,,,] 27128 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-08-11 09:25:55.245  INFO [service-pencairan,,,] 27128 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-08-11 09:25:55.293 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : HTTP GET http://172.100.201.71:9090/auth/realms/efos/protocol/openid-connect/certs
+2022-08-11 09:25:55.293 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:25:55.318 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Response 200 OK
+2022-08-11 09:25:55.319 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2022-08-11 09:25:55.341 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/mkm/pencairan/settanggalakad", parameters={}
+2022-08-11 09:25:55.343 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.brk.servicepencairan.controllers.PencairanMkmController#settanggalakad(Map, Jwt)
+2022-08-11 09:25:55.364 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{id_loan=M.820.2022.0000009, user_id=BRK011631, user_nama=Riska Indriani, bawa_pasangan=1, tgl_akad= (truncated)...]
+2022-08-11 09:25:55.392  INFO [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** REQUEST FROM FRONTEND /mkm/pencairan/settanggalakad ************** @ {"id_loan":"M.820.2022.0000009","user_id":"BRK011631","user_nama":"Riska Indriani","bawa_pasangan":"1","tgl_akad":"2022-08-11"} 
+
+2022-08-11 09:25:55.661  INFO [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] c.b.s.c.PencairanMkmController           : 
+ ************** RESPONSE TO FRONTEND /mkm/pencairan/settanggalakad ************** @ {"pesan":"GENERATE TANGGAL BERHASIL","kode":"00","tanggal_akad":{"month":"AUGUST","year":2022,"dayOfMonth":11,"hour":0,"minute":0,"monthValue":8,"nano":0,"second":0,"dayOfWeek":"THURSDAY","dayOfYear":223,"chronology":{"id":"ISO","calendarType":"iso8601"}}} 
+
+2022-08-11 09:25:55.664 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-08-11 09:25:55.664 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{pesan=GENERATE TANGGAL BERHASIL, kode=00, tanggal_akad=2022-08-11T00:00}]
+2022-08-11 09:25:55.673 DEBUG [service-pencairan,c38a217814bf94c2,c38a217814bf94c2,true] 27128 --- [http-nio-8046-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-08-11 09:25:56.093 DEBUG [service-pencairan,,,] 27128 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@7698b7a4}] org.springframework.web.HttpLogging      : HTTP POST http://localhost:9411/api/v2/spans
+2022-08-11 09:25:56.093 DEBUG [service-pencairan,,,] 27128 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@7698b7a4}] org.springframework.web.HttpLogging      : Accept=[text/plain, application/json, application/*+json, */*]
+2022-08-11 09:25:56.093 DEBUG [service-pencairan,,,] 27128 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@7698b7a4}] org.springframework.web.HttpLogging      : Writing [[B@42e3f781] as "application/json"
+2022-08-11 09:25:56.602  WARN [service-pencairan,,,] 27128 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@7698b7a4}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-08-11 09:25:56.605  WARN [service-pencairan,,,] 27128 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@7698b7a4}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.19.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284) ~[zipkin-reporter-2.12.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358) [zipkin-reporter-2.12.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_301]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_301]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_301]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[na:1.8.0_301]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_301]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_301]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_301]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[na:1.8.0_301]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990) ~[na:1.8.0_301]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739) ~[spring-web-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 9 common frames omitted
+
+2022-08-11 09:30:51.849  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:35:51.857  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:40:51.867  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:45:51.868  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:50:51.880  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 09:55:51.882  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:00:51.884  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:05:51.885  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:10:51.890  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:15:51.893  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:20:51.895  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:25:51.901  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:30:51.902  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:35:51.911  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:40:51.920  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:45:51.933  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:50:51.942  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 10:55:51.952  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:00:51.953  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:05:51.957  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:10:51.960  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:15:51.964  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:20:51.979  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:25:51.981  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:30:51.983  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:35:51.982  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:40:51.987  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:45:51.992  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:50:51.993  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 11:55:52.009  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:00:52.013  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:05:52.024  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:10:52.028  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:15:52.037  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:20:52.042  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:25:52.040  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:30:52.053  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:35:52.063  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:40:52.076  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:45:52.076  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:50:52.075  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 12:55:52.074  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:00:52.082  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:05:52.081  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:10:52.091  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:15:52.104  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:20:52.109  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:25:52.116  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:30:52.127  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:35:52.134  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:40:52.139  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:45:52.154  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:50:52.155  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 13:55:52.159  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:00:52.164  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:05:52.162  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:10:52.164  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:15:52.168  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:20:52.172  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:25:52.183  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:30:52.195  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:35:52.200  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:40:52.202  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:45:52.213  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:50:52.222  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 14:55:52.228  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:00:52.237  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:05:52.236  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:10:52.238  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:15:52.247  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:20:52.247  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:25:52.251  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:30:52.251  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:35:52.260  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:40:52.266  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:45:52.273  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:50:52.280  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 15:55:52.287  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:00:52.290  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:05:52.304  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:10:52.301  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:15:52.300  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:20:52.307  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:25:52.309  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:30:52.321  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:35:52.321  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:40:52.323  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:45:52.322  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:50:52.328  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 16:55:52.343  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:00:52.344  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:05:52.351  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:10:52.353  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:15:52.358  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:20:52.357  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:25:52.358  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:30:52.374  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:35:52.380  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:40:52.391  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:45:52.390  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:50:52.391  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 17:55:52.394  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 18:00:52.401  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 18:05:52.403  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 18:10:52.421  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 18:15:52.424  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 18:20:52.429  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-11 18:25:52.431  INFO [service-pencairan,,,] 27128 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

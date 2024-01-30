@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRKS-Pengajuan Online Pembiayaan</title>
+<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+
+<!-- <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<link rel="stylesheet"
+	href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.2/select2.css">
+
+<link rel="stylesheet" th:href="@{/style/main.css}">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+
+<script th:src="@{/bootstrap/js/bootstrap.bundle.js}"></script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.2/select2.min.js"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script th:src="@{jquery-inputmask/jquery.inputmask.bundle.js}"></script>
+<script th:src="@{jquery-inputmask/jquery.mask.js}"></script>
+
+<style type="text/css">
+.form-check {
+	margin-left: 15px;
+}
+
+.input-validation-error ~ .select2 .select2-selection {
+	border: 1px solid red;
+}
+
+.badge {
+	display: inline-block;
+	padding: 0.35em 0.65em;
+	font-size: .75em;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 0.25rem;
+	margin-bottom: 0px;
+}
+
+#msg {
+	margin: 10px;
+	padding: 30px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	background: -moz-linear-gradient(top, #2e5764, #1e3d47);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1e3d47),
+		color-stop(1, #2e5764));
+}
+/*url([[@{/images/loader-kecil.gif}]])*/
+#load {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	text-indent: 100%;
+	background: #e0e0e0 no-repeat center;
+	z-index: 99999999;
+	opacity: 0.8;
+	background-size: 7%;
+}
+
+/*seect 2 required */
+.was-validated .ls-select2:valid ~ .select2 .select2-selection,
+	.ls-select2.is-valid ~ .select2 .select2-selection {
+	border-color: #4fc47f;
+}
+
+.was-validated .ls-select2:valid ~ .select2 .select2-selection::before,
+	.ls-select2.is-valid ~ .select2 .select2-selection::before {
+	border-color: inherit;
+}
+
+.was-validated .ls-select2:valid ~ .valid-feedback, .was-validated .ls-select2:valid 
+	 ~ .valid-tooltip, .ls-select2.is-valid ~ .valid-feedback, .ls-select2.is-valid 
+	 ~ .valid-tooltip {
+	display: block;
+}
+
+.was-validated .ls-select2:valid:focus ~ .select2 .select2-selection,
+	.ls-select2.is-valid:focus ~ .select2 .select2-selection {
+	box-shadow: 0 0 0 0.2rem rgba(79, 196, 127, 0.25);
+}
+
+.was-validated .ls-select2:invalid ~ .select2 .select2-selection,
+	.ls-select2.is-invalid ~ .select2 .select2-selection {
+	border-color: #f35a3d;
+}
+
+.was-validated .ls-select2:invalid ~ .select2 .select2-selection::before,
+	.ls-select2.is-invalid ~ .select2 .select2-selection::before {
+	border-color: inherit;
+}
+
+.was-validated .ls-select2:invalid ~ .invalid-feedback, .was-validated .ls-select2:invalid 
+	 ~ .invalid-tooltip, .ls-select2.is-invalid ~ .invalid-feedback,
+	.ls-select2.is-invalid ~ .invalid-tooltip {
+	display: block;
+}
+
+.was-validated .ls-select2:invalid:focus ~ .select2 .select2-selection,
+	.ls-select2.is-invalid:focus ~ .select2 .select2-selection {
+	box-shadow: 0 0 0 0.2rem rgba(243, 90, 61, 0.25);
+}
+</style>
+</head>
+
+<body>
+	<!-- awal navbar -->
+	<!-- <div id="loader" class="center"></div>  -->
+	<div id="load" style="display: none;">Loading...</div>
+	<div class="container fixed-top">
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light bg-light shadow-lg">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"> <img
+					src="images/logo_bankriaukepri.png" alt="logo travel">  
+				</a>
+
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ms-auto">
+					<!-- 	<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/}">Home</a></li>
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#"
+							id="navbarDropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false"> Pengajuan </a>
+							<ul class="dropdown-menu"
+								aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" th:href="@{/formPengajuan}"><i
+										class="fa fa-check"> Form Pembiayaan</i></a></li>
+								<li><a class="dropdown-item" th:href="@{/cekNomorTiket}"><i
+										class="fa fa-check"> Cek Status Pengajuan</i></a></li>
+							</ul></li>
+						<li class="nav-item"><a th:href="@{/kalkulator}"
+							class="nav-link" aria-current="page" href="#">Simulasi</a></li>
+
+
+ -->
+					</ul>
+						 <form th:action="@{/}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">HOME</button>
+					</form>
+
+
+					<form th:action="@{/formPengajuan}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">AJUKAN
+							PEMBIAYAAN</button>
+					</form>
+
+					<form th:action="@{/cekNomorTiket}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">CHECK
+							STATUS PEMBIAYAAN</button>
+					</form>
+
+					<form th:action="@{/kalkulator}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">KALKULATOR</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- akhir navbar -->
+	<!-- awal header -->
+	<!-- content web -->
+	<section class="section-testimonial-heading bg-light">
+		<div class="container">
+			<section layout:fragment="custom-content"></section>
+		</div>
+		<br />
+	</section>
+	<!--END content web -->
+
+
+
+	<!-- akhir testimonial konten -->
+	<!-- awal footer -->
+	<footer class="section-footer">
+		<div class="container">
+			<div class="row pt-3">
+				<div class="col-12 col-lg-3">
+					<h5>Produk Dana</h5>
+					<ul class="list-unstyled">
+						<li><a href="https://www.brksyariah.co.id" target="_blank">Tabungan Sinar</a></li>
+							<li><a href="https://www.brksyariah.co.id" target="_blank">Sinar KPE</a></li>
+							<li><a href="https://www.brksyariah.co.id" target="_blank">Sinar Syariah</a></li>
+
+					</ul>
+				</div>
+				<div class="col-12 col-lg-3">
+					<h5>Digital Banking</h5>
+					<ul class="list-unstyled">
+						<li><a href="">CMS</a></li>
+						<li><a href="">BRK Mobile</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-lg-3">
+					<h5>Pembiayaan</h5>
+					<ul class="list-unstyled">
+						<li><a href="">Pembiayaan Aneka Guna</a></li>
+						<li><a href="">Pembiayaan Pemilikan Rumah</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-lg-3">
+					<h5>Layanan</h5>
+					<ul class="list-unstyled">
+						<li><a href="">BPUM Riau</a></li>
+						<li><a href="">Call Center</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-auto offset-lg-4 offset-sm-6 offset-md-4">
+					<p class="text-center">&copy; 2002 Copyright TSI Bank Riau
+						Kepri + All rights reserved + Made in Pekanbaru</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- akhir footer -->
+
+
+</body>
+<script>
+	/*harga_beli.addEventListener("input", format, false);
+	
+	function format (){
+		  let val = +harga_beli.value;
+		  document.getElementById("harga_beli").value =  val.toLocaleString('fullwide', {maximumFractionDigits:2, style:'currency', currency:'USD', useGrouping:true}) 
+		} */
+
+		
+		
+		
+		
+	$(document).ready(function() {
+		
+		$('#wilayah_kabupaten').on('change', function() {
+ 			var datakota = this.value;
+			var json = {"kota":datakota};
+			$.ajax({
+				type : "POST",
+				contentType : "application/json",
+				url : "/api/getCabangBywilayah/",
+				timeout : 600000,
+	            dataType: "json",
+	            data:JSON.stringify(json),
+				beforeSend : function() {
+					$("#loader").show();
+				},
+				success : function(response) {
+					$("#loader").hide();
+ 					$("#cab").select2("val", "");
+ 					$("#cab").empty();
+					//$("#tujuan_pembiayaan").append("<option value='' selected>" + 'Pilih Tujuan' + "</option>");
+					for (var i = 0; i < response.length; i++) {						
+           					$("#cab").append("<option value='" + response[i]["id"] +  "-" + response[i]["cabang"] + "'> " + response[i]["cabang"] + "</option>");
+     				}
+					//console.log("SUCCESS : ", data);
+				},
+
+				error : function(e) {
+					console.log("ERROR : ", e);
+					alert('Koneksi terputus silahkan coba beberapa saat lagi')
+					$("#loader").hide();
+				}
+			});
+		});
+
+		
+		/* $('#jenis_pembiayaan').on('change', function() {
+			if(this.value=="Konsumer"){
+				var jenis = "Konsumer";
+			}else{
+				var jenis = "MKM";
+			}
+			$.ajax({
+				type : "GET",
+				contentType : "application/json",
+				url : "/api/getTujuanPembiyaan/" + jenis,
+				timeout : 600000,
+	            dataType: "json",
+				beforeSend : function() {
+					$("#loader").show();
+				},
+				success : function(response) {
+					$("#loader").hide();
+ 					$("#tujuan_pembiayaan").select2("val", "");
+ 					$("#tujuan_pembiayaan").empty();
+					//$("#tujuan_pembiayaan").append("<option value='' selected>" + 'Pilih Tujuan' + "</option>");
+					for (var i = 0; i < response.length; i++) {						
+           					$("#tujuan_pembiayaan").append("<option value='" + response[i]["id"] +  "-" + response[i]["name"] + "'>" + response[i]["id"] + "-" + response[i]["name"] + "</option>");
+     				}
+					//console.log("SUCCESS : ", data);
+				},
+
+				error : function(e) {
+					console.log("ERROR : ", e);
+					alert('Koneksi terputus silahkan coba beberapa saat lagi')
+					$("#loader").hide();
+				}
+			});
+		}); */
+
+		$('#tujuan_pembiayaan').select2().on('change', function(e) {
+			var myArray = $("#tujuan_pembiayaan").val().split("-");
+			if (myArray == "Lainnya") {
+				$("#id_tujuan").show();
+				$("#id_tujuan_field").prop('required', true);
+			} else {
+				$("#id_tujuan").hide();
+				$("#id_tujuan_field").prop('required', false);
+			}
+		});
+
+		if ($('#tujuan_pembiayaan').val() !== "") {
+			var splitujuan = $("#tujuan_pembiayaan").val().split("-");
+			var splitujuan1 = splitujuan[1];
+			console.log(splitujuan);
+			console.log(splitujuan1);
+
+			if (splitujuan1.replace(/\ /g, "") == "Lainnya") {
+				$("#id_tujuan").show();
+				$("#id_tujuan_field").prop('required', true);
+			} else {
+				$("#id_tujuan").hide();
+				$("#id_tujuan_field").prop('required', false);
+			}
+
+		}
+
+		$("form#form_cari_rekening").submit(function(event) {
+			event.preventDefault();
+			inputktp_ajax_submit();
+		});
+
+		$("#form_pendaftaran").submit(function(event) {
+			event.preventDefault();
+			savependaftaran_ajax_submit();
+		});
+
+		$("#datadiri").hide();
+
+		$('input[type="checkbox"]').click(function() {
+			if ($(this).prop("checked") == true) {
+				$("#btn-next").show();
+			} else if ($(this).prop("checked") == false) {
+				$("#btn-next").hide();
+			}
+		});
+	
+		$("#harga_beli").mask("000,000,000,000", {
+			reverse : true
+		});
+		
+		$("#uang_muka").mask("000,000,000,000", {
+			reverse : true
+		});
+		
+  
+		$("#plafon_pengajuan").mask("000,000,000,000", {
+			reverse : true
+		});
+	
+		$('#datepicker').datepicker({
+			uiLibrary : 'bootstrap3',
+			autoclose : true
+
+		});
+
+		
+		
+		
+		$('#wilayah_kabupaten').select2({
+			placeholder : "Pilih  Wilayah Kabupaten Cabang Terdekat",
+			theme : 'bootstrap-5',
+			//minimumResultsForSearch : Infinity
+		});
+		
+		
+		$('#jenis_pembiayaan').select2({
+			placeholder : "Pilih  Jenis Pembiayaan",
+			theme : 'bootstrap-5',
+			//minimumResultsForSearch : Infinity
+
+		});
+		
+		
+		$('#cab').select2({
+			placeholder : "Pilih  Terdekat",
+			theme : 'bootstrap-5',
+			//minimumResultsForSearch : Infinity
+
+		});
+
+		$('#tujuan_pembiayaan').select2({
+			placeholder : "Pilih Tujuan Pembiayaan",
+			theme : 'bootstrap-5',
+			minimumResultsForSearch : Infinity
+		});
+
+	 
+
+	});
+
+	function savependaftaran_ajax_submit() {
+
+		$
+				.ajax({
+					type : "POST",
+					contentType : "application/json; charset=utf-8",
+					url : "/savependaftaran",
+					data : JSON.stringify({
+						'ktp' : $("#ktp").val(),
+						'nama' : $("#nama").val(),
+						'npwp' : $("#npwp").val(),
+						'status_pernikahan' : $("#status_pernikahan").val(),
+						'tmp_lahir' : $("#ktp").val(),
+						'tgl_lahir' : $("#tgl_lahir").val(),
+						'kelamin' : $("#kelamin").val(),
+						'alamat' : $("#alamat").val(),
+						'cab' : $("#cab").val(),
+						'namaCabang' : $("#namaCabang").val(),
+						'no_telp' : $("#no_telp").val(),
+						'email' : $("#email").val(),
+						'tujuan_pembiayaan' : $("#tujuan_pembiayaan").val(),
+						'tenor_pengajuan' : $("#tenor_pengajuan").val(),
+						'plafon_pengajuan' : $("#plafon_pengajuan").val()
+					}),
+					cache : false,
+					success : function(result) {
+						$("#msg")
+								.html(
+										"<span style='color: green'>Registrasi Pembiayaan berhasil</span>");
+						window.setTimeout(function() {
+							location.reload()
+						}, 1000)
+					},
+					error : function(err) {
+						$("#msg")
+								.html(
+										"<span style='color: red'>Name is required</span>");
+					}
+				});
+	}
+
+	function inputktp_ajax_submit() {
+		var nomor_rekening = $("#nomor_rekening").val();
+		$("#inputnorek2").prop("disabled", true);
+		console.log(nomor_rekening);
+		$.ajax({
+			type : "GET",
+			contentType : "application/json",
+			url : "/api/searchnasabah/" + nomor_rekening,
+			timeout : 600000,
+			beforeSend : function() {
+				$("#loader").show();
+			},
+
+			success : function(data) {
+				$("#loader").hide();
+				$("#inputktp").hide();
+				//$("#datapermohonan").show();
+
+				if (data.rcode == "00") {
+					nama = data.nama;
+					$("#datapermohonan").show();
+					$("#ktp").val(data.ktp.trim());
+					$("#nama").val(data.nama.trim());
+					$("#npwp").val(data.npwp.trim());
+					$("#status_nikah").val(data.status_nikah);
+
+					if (data.jenis_kelamin == "M") {
+						$("#kelamin").val("0");
+					} else {
+						$("#kelamin").val("1");
+					}
+
+					$("#alamat").val(data.alamat.trim());
+
+					tahun = (data.tanggal_lahir).substring(0, 4); //19950101
+					bulan = (data.tanggal_lahir).slice(4, 6);
+					tgl = (data.tanggal_lahir).slice(6, 8);
+					tanggal_lahir = bulan + "/" + tahun + "/" + tgl;
+
+					$("#tgl_lahir").val(tanggal_lahir);
+					$("#tmp_lahir").val(data.tempat_lahir.trim());
+					$("#email").val(data.email.trim());
+					$("#no_telp").val(data.nomor_hp.trim());
+
+					console.log("SUCCESS : ", data);
+
+					$("#inputnorek2").prop("disabled", false);
+				}
+
+				if (data.rcode == "05") {
+					alert("Data tidak ditemukan !!");
+				}
+
+			},
+
+			error : function(e) {
+				console.log("ERROR : ", e);
+				alert('Koneksi terputus silahkan coba beberapa saat lagi')
+				$("#inputnorek2").prop("disabled", false);
+				$("#loader").hide();
+			}
+		});
+
+	}
+
+	function nextsyarat() {
+
+		/* $("#question2").show();
+		$("#syarat").hide(); */
+		
+		window.location.href = "http://localhost:6060/formPengajuanFinal";
+
+
+	}
+
+	function prevpunyarekening() {
+
+		$("#question2").hide();
+		$("#syarat").show();
+
+	}
+
+	function nextjenisdebitur() {
+		var jenisnasabah = $('input[name="jenisnasabah"]:checked').val();
+		if (jenisnasabah == "perorangan") {
+			$("#datapermohonan").show();
+			$("#question1").hide();
+		} else {
+			$("#datapermohonanperusahaan").show();
+			$("#question1").hide();
+		}
+
+	}
+
+	function prevjenisdebitur() {
+		$("#question1").hide();
+		$("#question2").show();
+	}
+
+	function preinputrekening() {
+		$("#inputktp").hide();
+		$("#question2").show();
+	}
+
+	function nextpunyarekening() {
+ 	/* 	var isrekening = $('input[name="punyarekening"]:checked').val();
+		if (isrekening == "0") {
+			console.log("TES FADE OUT"); */
+			alert('test');
+ 			window.location.href = "http://localhost:6060/formPengajuanFinal";
+ 		/* 	$("#question2").hide();
+
+		} else {
+			$("#inputktp").show();
+			$("#question2").hide();
+		} */
+	}
+
+	function activaTab(tab) {
+		$('.nav-tabs a[href="#' + tab + '"]').tab('show');
+	};
+
+	activaTab('aaa');
+	(function() {
+		'use strict'
+
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
+
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms).forEach(function(form) {
+			form.addEventListener('submit', function(event) {
+				if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
+				}
+
+				form.classList.add('was-validated')
+			}, false)
+		})
+	})()
+</script>
+
+</html>

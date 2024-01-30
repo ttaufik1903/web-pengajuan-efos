@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template-efos.html}">
+<head>
+<title>DETAIL PRODUK</title>
+
+</head>
+<body>
+	<section layout:fragment="custom-content">
+
+		<nav style="-bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+
+				<li class="breadcrumb-item active" aria-current="page">Deskripsi
+					Konsumer</li>
+			</ol>
+		</nav>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-6" style="margin-top: 10px">
+
+					<img src="images/MIKRO.jpg" alt="logo travel"
+						style="width: 100%; height: 400px;" />
+				</div>
+				<div class="col-6" style="margin-top: 10px">
+
+					<P>
+						<B>Pembiayaan Usaha Mikro</B> adalah pembiayaan usaha produktif
+						yang diberikan kepada usaha mikro baik untuk pembiayaan investasi
+						dan/atau pembiayaan modal kerja dengan plafon sampai dengan Rp.
+						50.000.000,- (lima puluh juta rupiah) tidak termasuk pembiayaan
+						program.
+					</p>
+					<p>
+						<b>Keuntungan</b>
+					<ul>
+						<li>Membantu para pengusaha mikro untuk mendapatkan
+							pembiayaan modal kerja dan/atau pembiayaan investasi.</li>
+						<li>Fasilitas pembiayaan mencapai Rp 50 juta</li>
+						<li>Proses pengajuan cepat</li>
+						<li>Persyaratan mudah</li>
+						<li>Jangka waktu cicilan hingga 5 tahun</li>
+
+					</ul>
+					</p>
+					<p>
+						<b>Syarat dan Ketentuan</b>
+					<li>Memiliki usaha produktif</li>
+					<li>Mengisi formulir permohonan Pembiayaan sesuai format Bank
+					</li>
+					<li>Surat keterangan berusaha minimal dari Kelurahan/Desa</li>
+					<li>Foto copy KTP suami/istri</li>
+					<li>Foto copy Jaminan</li>
+					</p>
+
+					<a th:href="@{/formPengajuan}" class="btn btn-danger" role="button"><i
+						class="fa fa-check"> Ajukan Pembiayaan </i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

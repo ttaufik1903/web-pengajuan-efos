@@ -1,0 +1,139 @@
+2022-08-08 07:59:10.077  INFO [service-prospek,,,] 21376 --- [main] c.r.s.ServiceProspekApplication          : No active profile set, falling back to default profiles: default
+2022-08-08 07:59:10.858  INFO [service-prospek,,,] 21376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-08 07:59:11.130  INFO [service-prospek,,,] 21376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 258ms. Found 12 JPA repository interfaces.
+2022-08-08 07:59:11.948  INFO [service-prospek,,,] 21376 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8b0c02fa-2a12-3fbb-9ddc-73e47f97f880
+2022-08-08 07:59:12.993  INFO [service-prospek,,,] 21376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8044 (http)
+2022-08-08 07:59:13.008  INFO [service-prospek,,,] 21376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-08 07:59:13.009  INFO [service-prospek,,,] 21376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-08-08 07:59:13.242  INFO [service-prospek,,,] 21376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-08 07:59:13.243  INFO [service-prospek,,,] 21376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3141 ms
+2022-08-08 07:59:15.400  INFO [service-prospek,,,] 21376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: efos]
+2022-08-08 07:59:15.532  INFO [service-prospek,,,] 21376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2022-08-08 07:59:15.831  INFO [service-prospek,,,] 21376 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-08 07:59:16.290  INFO [service-prospek,,,] 21376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-08 07:59:16.495  INFO [service-prospek,,,] 21376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-08 07:59:16.523  INFO [service-prospek,,,] 21376 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-08 07:59:17.644  WARN [service-prospek,,,] 21376 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceprospek.models.Hub_bank_Id
+2022-08-08 07:59:17.644  WARN [service-prospek,,,] 21376 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceprospek.models.Hub_bank_Id
+2022-08-08 07:59:17.646  WARN [service-prospek,,,] 21376 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.rabbai.serviceprospek.models.DebiturId
+2022-08-08 07:59:17.647  WARN [service-prospek,,,] 21376 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.rabbai.serviceprospek.models.DebiturId
+2022-08-08 07:59:19.480  INFO [service-prospek,,,] 21376 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.rabbai.serviceprospek.models.CifData (class must be instantiated by Interceptor)
+2022-08-08 07:59:20.469  INFO [service-prospek,,,] 21376 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-08 07:59:20.486  INFO [service-prospek,,,] 21376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'efos'
+2022-08-08 07:59:20.662  WARN [service-prospek,,,] 21376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-08 07:59:23.849  INFO [service-prospek,,,] 21376 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68e8bbab, org.springframework.security.web.context.SecurityContextPersistenceFilter@54d0d561, org.springframework.security.web.header.HeaderWriterFilter@4a723adf, org.springframework.security.web.authentication.logout.LogoutFilter@63cff421, org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter@210e4678, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dfaa2f0, org.springframework.security.web.session.SessionManagementFilter@d9ff1cd, org.springframework.security.web.access.ExceptionTranslationFilter@5bbaaf17, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@273c4b3]
+2022-08-08 07:59:23.920  WARN [service-prospek,,,] 21376 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-08 07:59:23.921  INFO [service-prospek,,,] 21376 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-08 07:59:24.032  WARN [service-prospek,,,] 21376 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-08-08 07:59:24.032  INFO [service-prospek,,,] 21376 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-08-08 07:59:24.539  INFO [service-prospek,,,] 21376 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-08 07:59:27.934  WARN [service-prospek,,,] 21376 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-08-08 07:59:29.325  INFO [service-prospek,,,] 21376 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-08-08 07:59:29.520  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-08-08 07:59:30.493  INFO [service-prospek,,,] 21376 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-08-08 07:59:30.494  INFO [service-prospek,,,] 21376 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-08-08 07:59:30.839  INFO [service-prospek,,,] 21376 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-08-08 07:59:30.839  INFO [service-prospek,,,] 21376 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-08-08 07:59:31.306  INFO [service-prospek,,,] 21376 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 07:59:31.750  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-08-08 07:59:31.751  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-08-08 07:59:31.751  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-08-08 07:59:31.751  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-08-08 07:59:31.751  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-08-08 07:59:31.751  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-08-08 07:59:31.751  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-08-08 07:59:32.489  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-08-08 07:59:32.498  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-08-08 07:59:32.502  INFO [service-prospek,,,] 21376 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-08-08 07:59:32.509  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1659920372505 with initial instances count: 1
+2022-08-08 07:59:32.517  INFO [service-prospek,,,] 21376 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE-PROSPEK with eureka with status UP
+2022-08-08 07:59:32.518  INFO [service-prospek,,,] 21376 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1659920372518, current=UP, previous=STARTING]
+2022-08-08 07:59:32.521  INFO [service-prospek,,,] 21376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PROSPEK/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-prospek:8044: registering service...
+2022-08-08 07:59:32.612  INFO [service-prospek,,,] 21376 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-PROSPEK/NB-TSI-011771.BANKRIAUKEPRI.CO.ID:service-prospek:8044 - registration status: 204
+2022-08-08 07:59:32.626  INFO [service-prospek,,,] 21376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8044 (http) with context path ''
+2022-08-08 07:59:32.627  INFO [service-prospek,,,] 21376 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8044
+2022-08-08 07:59:33.866  INFO [service-prospek,,,] 21376 --- [main] c.r.s.ServiceProspekApplication          : Started ServiceProspekApplication in 24.939 seconds (JVM running for 25.358)
+2022-08-08 08:04:31.733  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:09:31.740  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:14:31.740  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:19:31.753  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:24:31.760  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:29:31.771  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:34:31.769  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:39:31.780  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:44:31.782  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:49:31.785  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:54:31.794  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 08:59:31.793  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:04:31.799  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:09:31.811  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:14:31.821  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:19:31.831  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:24:31.835  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:29:31.839  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:34:31.848  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:39:31.864  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:44:31.873  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:49:31.873  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:54:31.884  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 09:59:31.889  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:04:31.896  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:09:31.904  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:14:31.912  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:19:31.924  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:24:31.929  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:29:31.940  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:34:31.956  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:39:31.969  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:44:31.972  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:49:31.975  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:54:31.981  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 10:59:31.992  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:04:31.995  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:09:31.995  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:14:31.998  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:19:32.000  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:24:32.007  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:29:32.014  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:34:32.011  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:39:32.016  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:44:32.015  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:49:32.022  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:54:32.032  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 11:59:32.037  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:04:32.050  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:09:32.051  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:14:32.058  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:19:32.065  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:24:32.070  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:29:32.071  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:34:32.077  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:39:32.080  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:44:32.085  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:49:32.093  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:54:32.097  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 12:59:32.097  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:04:32.095  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:09:32.103  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:14:32.108  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:19:32.113  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:24:32.126  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:29:32.128  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:34:32.136  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:39:32.135  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:44:32.141  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:49:32.153  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:54:32.154  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 13:59:32.162  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:04:32.163  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:09:32.169  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:14:32.173  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:19:32.180  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:24:32.205  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:29:32.209  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:34:32.219  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:39:32.231  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:44:32.234  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:49:32.238  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:54:32.236  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-08-08 14:59:32.240  INFO [service-prospek,,,] 21376 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template-efos.html}">
+<head>
+<title>HASIL PERHITUNGAN</title>
+</head>
+<body>
+
+	<section layout:fragment="custom-content">
+		<nav style="-bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+				<li class="breadcrumb-item" aria-current="page"><a th:href="@{/kalkulator}">Kalkulator
+					Pembiayan</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Hasil
+					Perhitungan</li>
+			</ol>
+		</nav>
+
+
+		<br />
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<table class="table table-striped">
+						<tbody>
+							<tr>
+								<th colspan="4" style="font-size: 20px;">Ringkasan
+									Pembiayaan</th>
+							</tr>
+							<tr>
+								<td>Pembiayaan Bank</td>
+								<td>:</td>
+								<td><th:block th:text="${harga_beli}"></th:block></td>
+							</tr>
+							<!-- <tr>
+								<td>Uang Muka (DP)</td>
+								<td>:</td>
+								<td><th:block th:text="${uang_muka}"></th:block></td>
+							</tr> -->
+							<tr>
+								<td>Jangka Waktu</td>
+								<td>:</td>
+								<td><th:block th:text="${jangka_waktu}"></th:block></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-8">
+					<table class="table table-striped">
+						<tbody>
+							<tr>
+								<th colspan="4" style="font-size: 20px;">Hasil Perhitungan</th>
+							</tr>
+							<tr>
+								<td>Harga Perolehan</td>
+								<td>:</td>
+								<td><th:block th:text="${harga_perolehan}"></th:block></td>
+							</tr>
+
+							<tr>
+								<td>Rate Margin</td>
+								<td>:</td>
+								<td><th:block th:text="${rate_margin}"></th:block></td>
+							</tr>
+
+							<tr>
+								<td>Jangka Waktu</td>
+								<td>:</td>
+								<td><th:block th:text="${jangka_waktu}"></th:block></td>
+							</tr>
+
+							<tr>
+								<td>Total Margin</td>
+								<td>:</td>
+								<td><th:block th:text="${total_margin}"></th:block></td>
+							</tr>
+
+							<tr>
+								<td>Harga Jual</td>
+								<td>:</td>
+								<td><th:block th:text="${harga_jual}"></th:block></td>
+							</tr>
+
+						<!-- <tr>
+								<td>Uang Muka</td>
+								<td>:</td>
+								<td><th:block th:text="${uang_muka}"></th:block></td>
+							</tr>
+
+							<tr>
+								<td>Harga yang diangsur</td>
+								<td>:</td>
+								<td><th:block th:text="${harga_angsur}"></th:block></td>
+							</tr>
+ -->	
+							<tr>
+								<td>Angsuran per bulan</td>
+								<td>:</td>
+								<td><th:block th:text="${angsuran}"></th:block></td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<div class="col-6" style="margin-top: 10px">
+						<a th:href="@{/}" href="#" class="btn btn-warning" role="button"><i
+							class="fa fa-home"> KEMBALI </i></a> <a th:href="@{/formPengajuan}"
+							href="#" class="btn btn-success" role="button"><i
+							class="fa fa-edit"> Ajukan Pembiayaan</i></a> <a
+							th:href="@{/kalkulator}" href="#" class="btn btn-success"
+							role="button"><i class="fa fa-calculator"> Kalkulator</i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

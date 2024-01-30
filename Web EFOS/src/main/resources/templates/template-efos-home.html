@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRKS-Pengajuan Online Pembiayaan</title>
+<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" th:href="@{/style/main.css}">
+
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+
+ 
+
+.mySlides {
+	display: none;
+	opacity: 4;
+ 	transition: opacity 2s;
+}
+
+.mySlides.hide {
+  opacity: 0;
+}
+
+img {
+	vertical-align: middle;
+}
+/* Slideshow container */
+.slideshow-container {
+	max-width: 100%;
+  	position: relative;
+	margin: auto;
+}
+
+.slideshow-container img {
+  display: block;
+  max-width: 100%;
+   border-radius: 2px; 
+  }
+
+/* Caption text */
+.text {
+	color: blue;
+	font-size: 25px;
+ 	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: blue;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4
+}
+to {
+	opacity: 1
+}}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.text {
+		font-size: 21px
+	}
+}
+
+.rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+</style>
+</head>
+
+<body>
+	<!-- awal navbar -->
+	<div class="container fixed-top">
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light bg-light shadow-lg">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"> <img
+					src="images/logo_bankriaukepri.png" alt="logo travel">
+				</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			   <ul class="navbar-nav ms-auto">
+					<!-- 	<li class="nav-item"><a class="nav-link active"
+							aria-current="page" th:href="@{/}">Home</a></li>
+
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#"
+							id="navbarDropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false"> Pengajuan </a>
+							<ul class="dropdown-menu"
+								aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" th:href="@{/formPengajuan}"><i
+										class="fa fa-check"> Form Pembiayaan</i></a></li>
+								<li><a class="dropdown-item" th:href="@{/cekNomorTiket}"><i
+										class="fa fa-check"> Cek Status Pengajuan</i></a></li>
+							</ul></li>
+						<li class="nav-item"><a th:href="@{/kalkulator}"
+							class="nav-link" aria-current="page" href="#">Simulasi</a></li>
+ -->
+						
+					</ul>  
+					
+					 <form th:action="@{/}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">HOME</button>
+					</form>
+
+
+					<form th:action="@{/formPengajuan}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">AJUKAN
+							PEMBIAYAAN</button>
+					</form>
+
+					<form th:action="@{/cekNomorTiket}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">CHECK
+							STATUS PEMBIAYAAN</button>
+					</form>
+
+					<form th:action="@{/kalkulator}"
+						class="d-inline my-2 my-lg-0 d-none d-md-block">
+						<button type="submit"
+							class="btn btn-login my-2 my-sm-0 btn-navbar-right px-0 ps-4 pe-4">KALKULATOR</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- akhir navbar -->
+	<!-- awal header -->
+	<header class="header">
+		<!--  <div class="container">
+			<h2>WEB PENGAJUAN ONLINE PEMBIAYAAN </h2>
+			<p>BANK RIAU KEPRI SYARIAH</p>
+			<a class="btn btn-get-started px-4 mt-4 shadow" th:href="@{/formPengajuan}">Get
+				Started</a>
+		</div> -->
+		<div class="container">
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="images/KKB_FINAL.jpg" alt="logo travel">
+					<div class="text"><a th:href="@{/formPengajuan}" class="btn btn-primary btn-sm"><i class="fa fa-forward"></i> AJUKAN PEMBIAYAAN</a></div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="images/MIKRO.jpg" alt="logo travel" >
+					<div class="text"><a th:href="@{/formPengajuan}" class="btn btn-primary btn-sm"><i class="fa fa-forward"></i> AJUKAN PEMBIAYAAN</a></div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="images/PAG.jpg" alt="logo travel" >
+					<div class="text"><a th:href="@{/formPengajuan}" class="btn btn-primary btn-sm"><i class="fa fa-forward"></i> AJUKAN PEMBIAYAAN</a></div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<br>
+
+		<div style="text-align: center">
+			<span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+		</div>
+	</header>
+	<!-- akhir header -->
+
+
+
+
+	<!-- awal testimonial konten -->
+	<div class="section-popular-content">
+		<div class="container">
+			<div class="row section-travel-card justify-content-center ms-auto">
+				<div class="col-sm-3 col-md-4 col-lg-6">
+					<div class="card-travel text-center d-flex flex-column shadow"
+						style="background-image: url(/images/popular-1.jpg); height: max-content;">
+						<div class="travel-country">Pembiayaan Kosumer</div>
+						<div class="travel-location">Pembiayaan untuk pembelian
+							kebtuhan konsumtif yang dapat dinikmati baik PNS maupun Swasta</div>
+						<div class="travel-button mt-auto">
+							<a th:href="@{/detailkonsumer}"
+								class="btn btn-travel-detail px-4">View Detail</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-4 col-lg-6">
+					<div class="card-travel text-center d-flex flex-column shadow"
+						style="background-image: url(/images/popular-2.jpg); height: max-content;">
+						<div class="travel-country">Pembiayaan MKM</div>
+						<div class="travel-location">Pembiayaan untuk pembelian
+							menengembagkan usaha anda dengan skala usaha baik kecil, mikro
+							maupun menengah</div>
+						<div class="travel-button mt-auto">
+							<a th:href="@{/detailmkm}" class="btn btn-travel-detail px-4">View
+								Detail</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="row ">
+				<div class="col-12 text-center">
+					<a href="#" class="btn-need-help btn px-4 mt-4 mx-1 shadow">I
+						Need Help</a> <a href="#"
+						class="btn-get-started btn px-4 mt-4 mx-1 shadow">Get Started</a>
+				</div>
+			</div>
+		</div>
+		</section>
+		<!-- akhir testimonial konten -->
+		<!-- awal footer -->
+		<footer class="section-footer">
+			<div class="container">
+				<div class="row pt-3">
+					<div class="col-12 col-lg-3">
+						<h5>Produk Dana</h5>
+						<ul class="list-unstyled">
+							<li><a href="https://www.brksyariah.co.id">Tabungan Sinar</a></li>
+							<li><a href="https://www.brksyariah.co.id">Sinar KPE</a></li>
+							<li><a href="https://www.brksyariah.co.id">Sinar Syariah</a></li>
+
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h5>Digital Banking</h5>
+						<ul class="list-unstyled">
+							<li><a href="">CMS</a></li>
+							<li><a href="">BRK Mobile</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h5>Pembiayaan</h5>
+						<ul class="list-unstyled">
+							<li><a href="">Pembiayaan Aneka Guna</a></li>
+							<li><a href="">Pembiayaan Pemilikan Rumah</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h5>Layanan</h5>
+						<ul class="list-unstyled">
+							<li><a href="">BPUM Riau</a></li>
+							<li><a href="">Call Center</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-auto offset-lg-4 offset-sm-6 offset-md-4">
+						<p class="text-center">&copy; 2002 Copyright TSI Bank Riau
+							Kepri + All rights reserved + Made in Pekanbaru</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- akhir footer -->
+		<script th:src="@{/bootstrap/js/bootstrap.bundle.js}"></script>
+		<script>
+			let slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+				let i;
+				//let slides = document.getElementsByClassName("mySlides");
+				
+				 let slides = document.getElementsByClassName('mySlides');
+
+				
+				let dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+				 
+					slides[i].style.display = "none";
+	 
+					
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className
+							.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+				setTimeout(showSlides, 3000); // Change image every 2 seconds
+			}
+		</script>
+</body>
+ 
+</html>

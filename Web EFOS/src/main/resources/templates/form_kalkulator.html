@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template-efos.html}">
+<head>
+
+<title>KALKULATOR PEMBIAYAAN</title>
+
+</head>
+
+
+<body>
+
+	<section layout:fragment="custom-content">
+
+
+		<nav style="-bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Simulasi
+					Pembiayaan PAG</li>
+			</ol>
+		</nav>
+
+		<div class="alert alert-success alert-dismissible" th:if="${success}">
+			<strong>Info!</strong>
+			<th:block th:text="${success}"></th:block>
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		</div>
+
+		<div class="alert alert-danger alert-dismissible" th:if="${error}">
+			<strong>Info!</strong>
+			<th:block th:text="${error}"></th:block>
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		</div>
+
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+					data-bs-target="#home" type="button" role="tab"
+					aria-controls="home" aria-selected="true">Simulasi
+					Angsuran</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+					data-bs-target="#profile" type="button" role="tab"
+					aria-controls="profile" aria-selected="false">Simulasi
+					Plafond</button>
+			</li>
+
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="home" role="tabpanel"
+				aria-labelledby="home-tab">
+				<div class="container"
+					style="padding: 10px; background-color: #FFFFFa;" id="kalkulator1">
+
+					<form class="row g-3 needs-validation" novalidate
+						th:action="@{/prosesKalkulator}" method="POST" enctype="utf8"
+						th:object="${kalkulator}">
+
+						<div class="col-md-12">
+							<!-- <h5>
+								<span class="badge bg-primary">Simulasi Pembiayaan
+									Konsumer</span>
+							</h5>  -->
+							<label for="pwd">Pembiayaan Bank</label> <input
+								type="number" class="form-control form-control-sm"
+								th:attr="name='harga_beli'" id="harga_beli"
+								th:value="${harga_beli}" required>
+							<div class="invalid-feedback">Pembiayaan Bank tidak boleh kosong</div>
+						</div>
+
+						<div class="col-md-12" style="display:none;">
+							<label for="uang_muka">Uang Muka</label> <input type="text"
+								class="form-control form-control-sm" id="uang_muka" value="0"
+								th:attr="name='uang_muka'" th:value="${uang_muka}">
+							<div class="invalid-feedback">Uang Muka tidak boleh kosong</div>
+						</div>
+
+						<div class="col-md-12">
+							<label for="jangka_waktu">Jangka Waktu (bulan)</label> <input
+								type="number" class="form-control form-control-sm"
+								id="jangka_waktu" th:attr="name='jangka_waktu'"
+								th:value="${jangka_waktu}" required>
+						</div>
+
+						<div class="col-md-12">
+							<label for="pwd" class="form-label">Margin (Tingkat Keuntungan Bank Flat)</label> <input
+								type="number" class="form-control form-control-sm" id="margin"
+								th:attr="name='margin'" th:value="${margin}" required>
+						</div>
+
+						<div class="col-md-12">
+							<label for="pwd">Periode Bayar</label> <select
+								class="form-control form-control-sm">
+								<option value="0">Bulanan</option>
+							</select>
+						</div>
+
+						<div class="g-recaptcha"
+							data-sitekey="6Le218UeAAAAACJdjnk--SMwoFif30T4EnWtdZiO"></div>
+						<br />
+						<div class="col-12" style="margin-top: 10px">
+							<button type="submit" class="btn btn-primary">
+								<i class="fa fa-check"> Hitung </i>
+							</button>
+							<a th:href="@{/}" class="btn btn-danger" role="button"><i
+								class="fa fa-home"> Kembali</i></a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="profile" role="tabpanel"
+				aria-labelledby="profile-tab">
+				<div class="container"
+					style="padding: 10px; background-color: #FFFFFa;" id="kalkulator1">
+
+					<form class="row g-3 needs-validation" novalidate
+						th:action="@{/prosesKalkulator2}" method="POST" enctype="utf8"
+						th:object="${kalkulator2}">
+						
+						
+						<div class="col-md-12">
+							<label for="pwd">Angsuran yang diinginkan</label> <input
+								type="number" class="form-control form-control-sm"
+								th:attr="name='angsuran'" id="angsuran" th:value="${angsuran}"
+								required>
+							<div class="invalid-feedback">Angsuran tidak boleh kosong</div>
+						</div>
+
+
+						<div class="col-md-12">
+							<label for="jangka_waktu">Jangka Waktu (Bulan)</label> <input
+								type="number" class="form-control form-control-sm"
+								id="jangka_waktu" th:attr="name='jangka_waktu'"
+								th:value="${jangka_waktu}" required>
+							<div class="invalid-feedback">Jangka waktu tidak boleh
+								kosong</div>
+						</div>
+						
+						<div class="col-md-12">
+							<label for="pwd" class="form-label">Margin (Tingkat
+								Keuntungan Bank)</label> <input type="number"
+								class="form-control form-control-sm" id="margin"
+								th:attr="name='margin'" th:value="${margin}" required>
+							<div class="invalid-feedback">Margin tidak boleh kosong</div>
+
+						</div>
+
+						<div class="g-recaptcha"
+							data-sitekey="6Le218UeAAAAACJdjnk--SMwoFif30T4EnWtdZiO"></div>
+						<br />
+						<div class="col-12" style="margin-top: 10px">
+							<button type="submit" class="btn btn-primary">
+								<i class="fa fa-check"> Hitung </i>
+							</button>
+							<a th:href="@{/}" class="btn btn-danger" role="button"><i
+								class="fa fa-home"> Kembali</i></a>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+
+	</section>
+</body>
+
+</html>

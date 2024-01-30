@@ -1,0 +1,116 @@
+bv:
+  ip: "192.168.1.5"
+  user: "EFOSBRK"
+  pass: "EFOSBRK1"
+  
+spring:
+  banner:
+    location: classpath:/banner.txt
+#  cloud:
+#    gateway:
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedMethods:
+#              - GET
+#              - POST
+  application:
+    name: service-usulan
+  zipkin:
+    enabled: true
+    service.name: service-usulan
+    sender.type: web
+    base-url: http://localhost:9411
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+#        DEV
+          jwk-set-uri: http://172.100.201.71:9090/auth/realms/efos/protocol/openid-connect/certs
+#          PROD
+#          jwk-set-uri: http://172.100.10.232:9090/auth/realms/EFOS/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+#          DEV
+            issuer-uri: http://172.100.201.71:9090/auth/realms/efos
+#            PROD
+#            issuer-uri: http://172.100.10.232:9090/auth/realms/EFOS
+        registration:
+          keycloak:
+#          DEV
+            client-id: efos
+            client-secret: ee78b406-7cfe-4339-8249-cebde1ef450c
+#           PROD
+#            client-id: efos
+#            client-secret: 009a600d-b77d-45e0-a743-a01b03048b7b
+  jpa:  
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: default
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        naming_strategy: org.hibernate.cfg.EJB3NamingStrategy
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+          
+  datasource:
+ #  DEV
+    driver-class-name: org.postgresql.Driver
+    jdbcUrl: jdbc:postgresql://172.100.201.71:5432/db_efos
+    username: postgres
+    password: P@ssw0rd
+#    PROD
+#    driver-class-name: org.postgresql.Driver
+#    jdbcUrl: jdbc:postgresql://localhost:5432/efos
+#    username: postgres
+#    password: Postgresql@119
+  mail:
+    host: mail.bankriaukepri.co.id
+    username: brkqris@bankriaukepri.co.id
+    password: Qr!s119
+    properties.mail.transport:
+      protocol: smtp
+    properties.mail.smtp:
+      port: 587
+      auth: true
+      starttls.enable: true
+      ssl.trust: mail.bankriaukepri.co.id
+      socketFactory.port: 587
+      socketFactory.fallback: false
+
+server:
+  port: 8045
+allowed:
+  origin: http://localhost:3000
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+      
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.rabbai.serviceusulan.controllers: DEBUG
+    org.hibernate: INFO
+    org.hibernate.type: INFO
+    
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: 
+    name: ./logs/service-usulanefos.log
+    max-size: 50MB
+    max-history: 720
